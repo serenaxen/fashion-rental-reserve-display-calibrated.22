@@ -86,7 +86,7 @@ class MainSimulator:
         # (8/17) create and initial a NominalSchedule class for the nominal schedule approach
         if alloc_policy == "NomiSch":
             self.nominal_schedule = NominalSchedule()
-            self.nominal_schedule.initialize(self.initial_rt_flow)
+            self.nominal_schedule.initialize(self.inventory.num_items, self.initial_rt_flow)
 
         for t in range(time_horizon):
             self.update_one_period(t, disp_policy, admit_policy, alloc_policy)
@@ -100,7 +100,12 @@ class MainSimulator:
         # EXPORT case static data to files
         self.export_case_info()
 
-        return num_req, adm_rate, succ_order_rate, service_rate
+        # # REPORT req stories
+        req_stories = []
+        if self.paras["diagnosis_story_output"] == 1:
+            req_stories = self.report_req_story()
+
+        return num_req, adm_rate, succ_order_rate, service_rate, req_stories
 
     def update_one_period(self, t, disp_policy, admit_policy, alloc_policy):
         # REPORT
@@ -108,19 +113,19 @@ class MainSimulator:
         # receive returning items
         self.inventory.receive_returns()
 
-        # (8/16) deal with return on the fly
-        if alloc_policy == "NomiSch":
-            exp_delay_window = self.paras["return_delay_geom_mean"]*(1-self.paras["return_no_delay_proportion"]) #TODO: experiment goes here
-            exp_rt_flow = self.inventory.report_exp_return_flow()
-            for it in exp_rt_flow:
-                if it[1] <= 0: #it[0]: item_index, it[1] exp_return_periods
-                    affected_req_index = self.nominal_schedule.extend_release_time_for_delay(it[0], t, exp_delay_window)
-                    if affected_req_index:
-                        resolve = self.nominal_schedule.reschedule_for_one_item_delay(affected_req_index)
-                        if not resolve: # have to fail this affected order
-                            for od in self.orders:
-                                if od.req_index == affected_req_index:
-                                    od.fail_order()
+        # # (8/16) deal with return delays on the fly
+        # if alloc_policy == "NomiSch":
+        #     exp_delay_window = self.paras["return_delay_geom_mean"]*(1-self.paras["return_no_delay_proportion"]) #TODO: experiment goes here
+        #     exp_rt_flow = self.inventory.report_exp_return_flow()
+        #     for it in exp_rt_flow:
+        #         if it[1] <= 0: #it[0]: item_index, it[1] exp_return_periods
+        #             affected_req_index = self.nominal_schedule.extend_release_time_for_delay(it[0], t, exp_delay_window)
+        #             if affected_req_index:
+        #                 resolve = self.nominal_schedule.reschedule_for_one_item_delay(affected_req_index)
+        #                 if not resolve: # have to fail this affected order
+        #                     for od in self.orders:
+        #                         if od.req_index == affected_req_index:
+        #                             od.fail_order(t)
 
         # sort out current inventory
         if disp_policy == "current":
@@ -171,8 +176,9 @@ class MainSimulator:
         # remove committed items
         if len(commited_items_id) > 0:
             early_periods = [desired_dates[i] - t for i in range(len(commited_items_id))] #may be negative if short delays allowed
+            commited_items_errps = [early_periods[i] + self.median_cycle_duration for i in range(len(commited_items_id))]
             commited_items_rps = [early_periods[i] + realized_cycle_duration[i] for i in range(len(commited_items_id))]
-            self.inventory.sendout_items(item_index_list=commited_items_id, rp_list=commited_items_rps)
+            self.inventory.sendout_items(item_index_list=commited_items_id, errp_list=commited_items_errps, rp_list=commited_items_rps)
 
         # info updates
         self.update_order_per_period(t)
@@ -200,6 +206,10 @@ class MainSimulator:
         req_cnt = 0
         for cr in self.requests[start_index:]:
             if cr.order_time == t:
+
+                # record story info for diagnosis
+                cr.write_story_when_admit_by_current(avai_inv)
+
                 if avai_inv > 0:
                     cr.admit()
                     self.create_order(cr.index, cr.order_time, cr.desired_periods, cr.realized_cycle_duration)
@@ -225,7 +235,13 @@ class MainSimulator:
             if cr.order_time == t:
                 desired_time = cr.order_time + cr.desired_periods
                 uncmtd_cnt = self.count_uncommited_order_due_by_future_time(desired_time)
-                avai_inv = self.inventory.predict_future_inv_median_cycle(t, desired_time, inv_occup_record, uncmtd_cnt, use_uncmtd) #predict for each case
+                avai_inv, current_inv, future_exp_return, num_occupied_items = self.inventory.predict_future_inv_median_cycle(t, desired_time, inv_occup_record) # predict: current_inv + future_exp_return - occupied by other predictions
+                if use_uncmtd == 1:
+                    avai_inv -= uncmtd_cnt # predict: - uncommitted_cnt (by future time)
+
+                # record story info for diagnosis
+                cr.write_story_when_admit_by_predict(avai_inv, current_inv, future_exp_return, num_occupied_items, use_uncmtd, uncmtd_cnt)
+
                 if avai_inv > 0:
                     cr.admit()
                     print("  admit req: %d, " %cr.index, "predicted inv at time: %d is %d"%(desired_time, avai_inv))
@@ -287,10 +303,10 @@ class MainSimulator:
 
         for od in self.orders:
             if od.status == 0 and od.desired_time <= t + self.length_of_delivery: #expired and failed
-                od.fail_order()
+                od.fail_order(t)
             if od.status == 1:
                 #committed, and could return on time
-                od.finish_order()
+                od.finish_order(t)
 
 
     def report_config(self, disp_policy, admit_policy, alloc_policy, EDD_leadtime):
@@ -346,12 +362,50 @@ class MainSimulator:
         req_df = pd.DataFrame(req_info)
         req_df.to_csv(req_datafile)
 
-        # # record the time when last item will return TODO: should be dependent with the policy
-        # total_periods = self.time_horizon + self.inventory.report_max_item_return_time()
-        # total_periods_datafile = os.path.join(save_dir, "total_periods" + str(self.rand_seed) + '.txt')
-        # total_periods_f = open(total_periods_datafile, 'w')
-        # total_periods_f.write(str(total_periods))
-        # total_periods_f.close()
+    def report_req_story(self):
+        # only for FOFS policy and EDD-cstp policy for comparison
+        cr_stories = []
+        for cr in self.requests:
+            cr_story = {}
+            cr_story["req_index"] = cr.index
+            cr_story["order_time"] = cr.order_time
+            cr_story["desired_time"] = cr.desired_time
+            cr_story["admit_outcome"] = cr.status # admit (1) or reject (-1) outcome
+
+            # current inv (for FOFS-current policy only)
+            if self.paras['display_policy_wrt'] == "current":
+                cr_story["toa_current_inv"] = cr.toa_current_inv
+
+            # future inv pred (for EDD-cstp policy only)
+            if self.paras['display_policy_wrt'] == "future_cstp":
+                cr_story["predict_with_uncmtd"] = cr.predict_with_uncmtd
+                cr_story["toa_current_inv"] = cr.toa_current_inv
+                cr_story["toa_future_exp_return"] = cr.toa_future_exp_return
+                cr_story["toa_uncmtd_cnt"] = cr.toa_uncmtd_cnt
+                cr_story["toa_occupied_by_pred_same_period"] = cr.toa_occupied_by_pred_same_period
+                cr_story["toa_inv_ref"] = cr.toa_inv_ref
+
+            cr_stories.append(cr_story)
+
+        od_stories = []
+        for od in self.orders:
+            od_story = {}
+            od_story["req_index"] = od.req_index
+            od_story["commit_outcome"] = od.status
+            od_story["realized_cycle_duration"] = od.realized_cycle_duration
+            if od.status == 2: #finished order
+                od_story["commit_time"] = od.commit_time
+                od_story["finish_time"] = od.finish_time
+                od_story["commit_item"] = od.commit_item
+            elif od.status == -2: #failed order
+                od_story["fail_time"] = od.fail_time
+            od_stories.append(od_story)
+
+        # merge by req_index
+        cr_df = pd.DataFrame(cr_stories)
+        od_df = pd.DataFrame(od_stories)
+        cr_df = cr_df.merge(od_df, how='left', on='req_index')
+        return cr_df
 
 # TEST BELOW
 # The script below is for one single case

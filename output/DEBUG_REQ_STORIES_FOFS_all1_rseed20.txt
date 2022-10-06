@@ -1,0 +1,2495 @@
+
+
+-----Parameters initialized-----: 
+ {'display_policy_wrt': 'current', 'admission_policy': 'IT0', 'allocation_policy': 'FOFS', 'EDD_lead_time': 2, 'exp_stage': 'DEBUG_REQ_STORIES_FOFS', 'export_data_dir': 'upper_bounds/data/', 'time_horizon': 182, 'total_items': 5, 'starting_inv': 5, 'inf_inv': 100, 'is_seed': 1, 'rand_seed': 20, 'customer_request_poisson_rate': 1, 'cycle_duration_lognormal_median': 38, 'cycle_duration_lognormal_mu': 3.615, 'cycle_duration_lognormal_sigma': 0.5073, 'customer_request_desired_time_ondmd_fixed': 3, 'customer_request_desired_time_binomial_n': 56, 'customer_request_desired_time_binomial_p': 0.25, 'length_of_delivery': 0}
+
+-----Initialization Phase-----
+
+Current inv quantity: 5
+Total inv: 5, In stock inv: 5
+Customer request full list: 
+  index: 0, will order at time: 1, desired arrival at time: 19; realized cycle duration: 33
+  index: 1, will order at time: 1, desired arrival at time: 21; realized cycle duration: 62
+  index: 2, will order at time: 1, desired arrival at time: 12; realized cycle duration: 48
+  index: 3, will order at time: 1, desired arrival at time: 17; realized cycle duration: 55
+  index: 4, will order at time: 4, desired arrival at time: 17; realized cycle duration: 39
+  index: 5, will order at time: 5, desired arrival at time: 19; realized cycle duration: 38
+  index: 6, will order at time: 6, desired arrival at time: 21; realized cycle duration: 20
+  index: 7, will order at time: 6, desired arrival at time: 25; realized cycle duration: 24
+  index: 8, will order at time: 7, desired arrival at time: 24; realized cycle duration: 24
+  index: 9, will order at time: 8, desired arrival at time: 28; realized cycle duration: 19
+  index: 10, will order at time: 10, desired arrival at time: 25; realized cycle duration: 40
+  index: 11, will order at time: 10, desired arrival at time: 19; realized cycle duration: 25
+  index: 12, will order at time: 10, desired arrival at time: 28; realized cycle duration: 41
+  index: 13, will order at time: 10, desired arrival at time: 23; realized cycle duration: 27
+  index: 14, will order at time: 11, desired arrival at time: 26; realized cycle duration: 35
+  index: 15, will order at time: 14, desired arrival at time: 32; realized cycle duration: 47
+  index: 16, will order at time: 16, desired arrival at time: 30; realized cycle duration: 18
+  index: 17, will order at time: 16, desired arrival at time: 33; realized cycle duration: 86
+  index: 18, will order at time: 18, desired arrival at time: 41; realized cycle duration: 112
+  index: 19, will order at time: 19, desired arrival at time: 43; realized cycle duration: 49
+  index: 20, will order at time: 19, desired arrival at time: 31; realized cycle duration: 37
+  index: 21, will order at time: 19, desired arrival at time: 31; realized cycle duration: 76
+  index: 22, will order at time: 20, desired arrival at time: 31; realized cycle duration: 24
+  index: 23, will order at time: 22, desired arrival at time: 36; realized cycle duration: 29
+  index: 24, will order at time: 22, desired arrival at time: 40; realized cycle duration: 59
+  index: 25, will order at time: 23, desired arrival at time: 36; realized cycle duration: 65
+  index: 26, will order at time: 23, desired arrival at time: 34; realized cycle duration: 57
+  index: 27, will order at time: 23, desired arrival at time: 37; realized cycle duration: 39
+  index: 28, will order at time: 24, desired arrival at time: 43; realized cycle duration: 24
+  index: 29, will order at time: 25, desired arrival at time: 35; realized cycle duration: 22
+  index: 30, will order at time: 25, desired arrival at time: 38; realized cycle duration: 23
+  index: 31, will order at time: 26, desired arrival at time: 39; realized cycle duration: 19
+  index: 32, will order at time: 27, desired arrival at time: 39; realized cycle duration: 26
+  index: 33, will order at time: 30, desired arrival at time: 39; realized cycle duration: 46
+  index: 34, will order at time: 30, desired arrival at time: 41; realized cycle duration: 75
+  index: 35, will order at time: 31, desired arrival at time: 50; realized cycle duration: 62
+  index: 36, will order at time: 32, desired arrival at time: 44; realized cycle duration: 31
+  index: 37, will order at time: 32, desired arrival at time: 39; realized cycle duration: 28
+  index: 38, will order at time: 34, desired arrival at time: 47; realized cycle duration: 31
+  index: 39, will order at time: 35, desired arrival at time: 50; realized cycle duration: 39
+  index: 40, will order at time: 35, desired arrival at time: 48; realized cycle duration: 39
+  index: 41, will order at time: 36, desired arrival at time: 56; realized cycle duration: 32
+  index: 42, will order at time: 37, desired arrival at time: 48; realized cycle duration: 18
+  index: 43, will order at time: 38, desired arrival at time: 58; realized cycle duration: 59
+  index: 44, will order at time: 39, desired arrival at time: 53; realized cycle duration: 57
+  index: 45, will order at time: 40, desired arrival at time: 57; realized cycle duration: 14
+  index: 46, will order at time: 42, desired arrival at time: 57; realized cycle duration: 23
+  index: 47, will order at time: 42, desired arrival at time: 53; realized cycle duration: 33
+  index: 48, will order at time: 42, desired arrival at time: 50; realized cycle duration: 90
+  index: 49, will order at time: 44, desired arrival at time: 63; realized cycle duration: 70
+  index: 50, will order at time: 45, desired arrival at time: 63; realized cycle duration: 56
+  index: 51, will order at time: 45, desired arrival at time: 61; realized cycle duration: 60
+  index: 52, will order at time: 46, desired arrival at time: 60; realized cycle duration: 30
+  index: 53, will order at time: 46, desired arrival at time: 59; realized cycle duration: 43
+  index: 54, will order at time: 46, desired arrival at time: 63; realized cycle duration: 91
+  index: 55, will order at time: 47, desired arrival at time: 61; realized cycle duration: 46
+  index: 56, will order at time: 47, desired arrival at time: 60; realized cycle duration: 24
+  index: 57, will order at time: 48, desired arrival at time: 61; realized cycle duration: 23
+  index: 58, will order at time: 48, desired arrival at time: 67; realized cycle duration: 24
+  index: 59, will order at time: 49, desired arrival at time: 64; realized cycle duration: 15
+  index: 60, will order at time: 50, desired arrival at time: 61; realized cycle duration: 29
+  index: 61, will order at time: 53, desired arrival at time: 69; realized cycle duration: 30
+  index: 62, will order at time: 53, desired arrival at time: 66; realized cycle duration: 16
+  index: 63, will order at time: 54, desired arrival at time: 71; realized cycle duration: 37
+  index: 64, will order at time: 54, desired arrival at time: 67; realized cycle duration: 63
+  index: 65, will order at time: 55, desired arrival at time: 66; realized cycle duration: 19
+  index: 66, will order at time: 56, desired arrival at time: 70; realized cycle duration: 53
+  index: 67, will order at time: 57, desired arrival at time: 68; realized cycle duration: 37
+  index: 68, will order at time: 58, desired arrival at time: 69; realized cycle duration: 31
+  index: 69, will order at time: 60, desired arrival at time: 72; realized cycle duration: 121
+  index: 70, will order at time: 61, desired arrival at time: 76; realized cycle duration: 90
+  index: 71, will order at time: 61, desired arrival at time: 75; realized cycle duration: 34
+  index: 72, will order at time: 61, desired arrival at time: 80; realized cycle duration: 20
+  index: 73, will order at time: 61, desired arrival at time: 76; realized cycle duration: 43
+  index: 74, will order at time: 62, desired arrival at time: 72; realized cycle duration: 22
+  index: 75, will order at time: 62, desired arrival at time: 79; realized cycle duration: 32
+  index: 76, will order at time: 63, desired arrival at time: 74; realized cycle duration: 54
+  index: 77, will order at time: 63, desired arrival at time: 72; realized cycle duration: 65
+  index: 78, will order at time: 65, desired arrival at time: 78; realized cycle duration: 35
+  index: 79, will order at time: 65, desired arrival at time: 81; realized cycle duration: 37
+  index: 80, will order at time: 68, desired arrival at time: 80; realized cycle duration: 52
+  index: 81, will order at time: 69, desired arrival at time: 81; realized cycle duration: 43
+  index: 82, will order at time: 70, desired arrival at time: 90; realized cycle duration: 40
+  index: 83, will order at time: 72, desired arrival at time: 93; realized cycle duration: 41
+  index: 84, will order at time: 73, desired arrival at time: 88; realized cycle duration: 47
+  index: 85, will order at time: 75, desired arrival at time: 91; realized cycle duration: 47
+  index: 86, will order at time: 75, desired arrival at time: 95; realized cycle duration: 67
+  index: 87, will order at time: 76, desired arrival at time: 93; realized cycle duration: 40
+  index: 88, will order at time: 78, desired arrival at time: 89; realized cycle duration: 35
+  index: 89, will order at time: 80, desired arrival at time: 92; realized cycle duration: 44
+  index: 90, will order at time: 81, desired arrival at time: 93; realized cycle duration: 36
+  index: 91, will order at time: 81, desired arrival at time: 102; realized cycle duration: 20
+  index: 92, will order at time: 84, desired arrival at time: 99; realized cycle duration: 25
+  index: 93, will order at time: 86, desired arrival at time: 104; realized cycle duration: 20
+  index: 94, will order at time: 86, desired arrival at time: 93; realized cycle duration: 63
+  index: 95, will order at time: 87, desired arrival at time: 103; realized cycle duration: 91
+  index: 96, will order at time: 87, desired arrival at time: 93; realized cycle duration: 43
+  index: 97, will order at time: 88, desired arrival at time: 97; realized cycle duration: 17
+  index: 98, will order at time: 88, desired arrival at time: 94; realized cycle duration: 35
+  index: 99, will order at time: 89, desired arrival at time: 100; realized cycle duration: 37
+  index: 100, will order at time: 89, desired arrival at time: 102; realized cycle duration: 49
+  index: 101, will order at time: 90, desired arrival at time: 110; realized cycle duration: 32
+  index: 102, will order at time: 91, desired arrival at time: 109; realized cycle duration: 71
+  index: 103, will order at time: 92, desired arrival at time: 107; realized cycle duration: 21
+  index: 104, will order at time: 93, desired arrival at time: 110; realized cycle duration: 14
+  index: 105, will order at time: 93, desired arrival at time: 101; realized cycle duration: 22
+  index: 106, will order at time: 94, desired arrival at time: 110; realized cycle duration: 64
+  index: 107, will order at time: 95, desired arrival at time: 105; realized cycle duration: 39
+  index: 108, will order at time: 96, desired arrival at time: 107; realized cycle duration: 24
+  index: 109, will order at time: 96, desired arrival at time: 115; realized cycle duration: 46
+  index: 110, will order at time: 97, desired arrival at time: 109; realized cycle duration: 38
+  index: 111, will order at time: 99, desired arrival at time: 116; realized cycle duration: 60
+  index: 112, will order at time: 99, desired arrival at time: 113; realized cycle duration: 39
+  index: 113, will order at time: 100, desired arrival at time: 116; realized cycle duration: 27
+  index: 114, will order at time: 100, desired arrival at time: 116; realized cycle duration: 56
+  index: 115, will order at time: 102, desired arrival at time: 116; realized cycle duration: 26
+  index: 116, will order at time: 103, desired arrival at time: 119; realized cycle duration: 23
+  index: 117, will order at time: 104, desired arrival at time: 116; realized cycle duration: 30
+  index: 118, will order at time: 106, desired arrival at time: 118; realized cycle duration: 60
+  index: 119, will order at time: 106, desired arrival at time: 123; realized cycle duration: 61
+  index: 120, will order at time: 106, desired arrival at time: 115; realized cycle duration: 34
+  index: 121, will order at time: 111, desired arrival at time: 123; realized cycle duration: 58
+  index: 122, will order at time: 112, desired arrival at time: 123; realized cycle duration: 26
+  index: 123, will order at time: 113, desired arrival at time: 124; realized cycle duration: 31
+  index: 124, will order at time: 113, desired arrival at time: 128; realized cycle duration: 45
+  index: 125, will order at time: 114, desired arrival at time: 124; realized cycle duration: 79
+  index: 126, will order at time: 114, desired arrival at time: 127; realized cycle duration: 45
+  index: 127, will order at time: 114, desired arrival at time: 129; realized cycle duration: 35
+  index: 128, will order at time: 115, desired arrival at time: 127; realized cycle duration: 47
+  index: 129, will order at time: 116, desired arrival at time: 128; realized cycle duration: 26
+  index: 130, will order at time: 116, desired arrival at time: 131; realized cycle duration: 21
+  index: 131, will order at time: 116, desired arrival at time: 133; realized cycle duration: 37
+  index: 132, will order at time: 117, desired arrival at time: 130; realized cycle duration: 66
+  index: 133, will order at time: 118, desired arrival at time: 127; realized cycle duration: 47
+  index: 134, will order at time: 118, desired arrival at time: 136; realized cycle duration: 19
+  index: 135, will order at time: 118, desired arrival at time: 136; realized cycle duration: 43
+  index: 136, will order at time: 119, desired arrival at time: 132; realized cycle duration: 60
+  index: 137, will order at time: 120, desired arrival at time: 135; realized cycle duration: 26
+  index: 138, will order at time: 120, desired arrival at time: 134; realized cycle duration: 41
+  index: 139, will order at time: 125, desired arrival at time: 141; realized cycle duration: 42
+  index: 140, will order at time: 127, desired arrival at time: 137; realized cycle duration: 35
+  index: 141, will order at time: 127, desired arrival at time: 137; realized cycle duration: 45
+  index: 142, will order at time: 128, desired arrival at time: 148; realized cycle duration: 25
+  index: 143, will order at time: 128, desired arrival at time: 146; realized cycle duration: 19
+  index: 144, will order at time: 128, desired arrival at time: 139; realized cycle duration: 23
+  index: 145, will order at time: 130, desired arrival at time: 141; realized cycle duration: 38
+  index: 146, will order at time: 132, desired arrival at time: 145; realized cycle duration: 50
+  index: 147, will order at time: 132, desired arrival at time: 142; realized cycle duration: 56
+  index: 148, will order at time: 133, desired arrival at time: 151; realized cycle duration: 41
+  index: 149, will order at time: 133, desired arrival at time: 151; realized cycle duration: 27
+  index: 150, will order at time: 134, desired arrival at time: 143; realized cycle duration: 74
+  index: 151, will order at time: 135, desired arrival at time: 154; realized cycle duration: 25
+  index: 152, will order at time: 136, desired arrival at time: 154; realized cycle duration: 17
+  index: 153, will order at time: 136, desired arrival at time: 153; realized cycle duration: 44
+  index: 154, will order at time: 137, desired arrival at time: 152; realized cycle duration: 27
+  index: 155, will order at time: 137, desired arrival at time: 147; realized cycle duration: 41
+  index: 156, will order at time: 137, desired arrival at time: 150; realized cycle duration: 58
+  index: 157, will order at time: 138, desired arrival at time: 157; realized cycle duration: 15
+  index: 158, will order at time: 140, desired arrival at time: 152; realized cycle duration: 24
+  index: 159, will order at time: 141, desired arrival at time: 152; realized cycle duration: 45
+  index: 160, will order at time: 142, desired arrival at time: 153; realized cycle duration: 58
+  index: 161, will order at time: 143, desired arrival at time: 157; realized cycle duration: 19
+  index: 162, will order at time: 143, desired arrival at time: 151; realized cycle duration: 29
+  index: 163, will order at time: 143, desired arrival at time: 158; realized cycle duration: 27
+  index: 164, will order at time: 144, desired arrival at time: 154; realized cycle duration: 54
+  index: 165, will order at time: 144, desired arrival at time: 157; realized cycle duration: 31
+  index: 166, will order at time: 145, desired arrival at time: 155; realized cycle duration: 63
+  index: 167, will order at time: 145, desired arrival at time: 160; realized cycle duration: 33
+  index: 168, will order at time: 145, desired arrival at time: 157; realized cycle duration: 30
+  index: 169, will order at time: 145, desired arrival at time: 161; realized cycle duration: 38
+  index: 170, will order at time: 146, desired arrival at time: 161; realized cycle duration: 32
+  index: 171, will order at time: 148, desired arrival at time: 161; realized cycle duration: 35
+  index: 172, will order at time: 148, desired arrival at time: 157; realized cycle duration: 48
+  index: 173, will order at time: 148, desired arrival at time: 173; realized cycle duration: 29
+  index: 174, will order at time: 149, desired arrival at time: 164; realized cycle duration: 70
+  index: 175, will order at time: 150, desired arrival at time: 157; realized cycle duration: 37
+  index: 176, will order at time: 150, desired arrival at time: 166; realized cycle duration: 39
+  index: 177, will order at time: 150, desired arrival at time: 163; realized cycle duration: 47
+  index: 178, will order at time: 151, desired arrival at time: 160; realized cycle duration: 33
+  index: 179, will order at time: 151, desired arrival at time: 162; realized cycle duration: 13
+  index: 180, will order at time: 152, desired arrival at time: 170; realized cycle duration: 47
+  index: 181, will order at time: 153, desired arrival at time: 164; realized cycle duration: 59
+  index: 182, will order at time: 155, desired arrival at time: 165; realized cycle duration: 30
+  index: 183, will order at time: 155, desired arrival at time: 166; realized cycle duration: 44
+  index: 184, will order at time: 155, desired arrival at time: 177; realized cycle duration: 33
+  index: 185, will order at time: 156, desired arrival at time: 171; realized cycle duration: 22
+  index: 186, will order at time: 158, desired arrival at time: 172; realized cycle duration: 88
+  index: 187, will order at time: 158, desired arrival at time: 172; realized cycle duration: 24
+  index: 188, will order at time: 158, desired arrival at time: 175; realized cycle duration: 45
+  index: 189, will order at time: 159, desired arrival at time: 173; realized cycle duration: 36
+  index: 190, will order at time: 159, desired arrival at time: 174; realized cycle duration: 35
+  index: 191, will order at time: 159, desired arrival at time: 176; realized cycle duration: 36
+  index: 192, will order at time: 160, desired arrival at time: 180; realized cycle duration: 56
+  index: 193, will order at time: 160, desired arrival at time: 168; realized cycle duration: 49
+  index: 194, will order at time: 163, desired arrival at time: 175; realized cycle duration: 73
+  index: 195, will order at time: 163, desired arrival at time: 179; realized cycle duration: 28
+  index: 196, will order at time: 164, desired arrival at time: 179; realized cycle duration: 37
+  index: 197, will order at time: 164, desired arrival at time: 177; realized cycle duration: 40
+  index: 198, will order at time: 165, desired arrival at time: 180; realized cycle duration: 39
+  index: 199, will order at time: 165, desired arrival at time: 180; realized cycle duration: 41
+  index: 200, will order at time: 166, desired arrival at time: 178; realized cycle duration: 26
+  index: 201, will order at time: 166, desired arrival at time: 182; realized cycle duration: 31
+  index: 202, will order at time: 167, desired arrival at time: 179; realized cycle duration: 62
+  index: 204, will order at time: 171, desired arrival at time: 179; realized cycle duration: 56
+Item returning flow: 
+
+----Period 0----
+Returned items []
+Current inv quantity: 5
+
+Admission control using CURRENT inv, avai_inv:  5
+Threshold 0 policy
+
+Allocation control with FOFS policy
+  current inv: 5
+
+Update order info
+
+----Period 1----
+Returned items []
+Current inv quantity: 5
+
+Admission control using CURRENT inv, avai_inv:  5
+Threshold 0 policy
+  admit req: 0, 
+  admit req: 1, 
+  admit req: 2, 
+  admit req: 3, 
+
+Allocation control with FOFS policy
+  current inv: 5
+  uncommited order: 0, order time: 1, desired time: 19
+  uncommited order: 1, order time: 1, desired time: 21
+  uncommited order: 2, order time: 1, desired time: 12
+  uncommited order: 3, order time: 1, desired time: 17
+  assign item 0 to order 0
+  assign item 1 to order 1
+  assign item 2 to order 2
+  assign item 3 to order 3
+Send out items:  [0, 1, 2, 3]
+Will be back in:  [51.0, 82.0, 59.0, 71.0]  (realized), expected to be back in:  54
+
+Update order info
+  order 0 successful, desired time 19 :)
+  order 1 successful, desired time 21 :)
+  order 2 successful, desired time 12 :)
+  order 3 successful, desired time 17 :)
+
+----Period 2----
+Returned items []
+Current inv quantity: 1
+
+Admission control using CURRENT inv, avai_inv:  1
+Threshold 0 policy
+
+Allocation control with FOFS policy
+  current inv: 1
+
+Update order info
+
+----Period 3----
+Returned items []
+Current inv quantity: 1
+
+Admission control using CURRENT inv, avai_inv:  1
+Threshold 0 policy
+
+Allocation control with FOFS policy
+  current inv: 1
+
+Update order info
+
+----Period 4----
+Returned items []
+Current inv quantity: 1
+
+Admission control using CURRENT inv, avai_inv:  1
+Threshold 0 policy
+  admit req: 4, 
+
+Allocation control with FOFS policy
+  current inv: 1
+  uncommited order: 4, order time: 4, desired time: 17
+  assign item 4 to order 4
+Send out items:  [4]
+Will be back in:  [52.0]  (realized), expected to be back in:  51
+
+Update order info
+  order 4 successful, desired time 17 :)
+
+----Period 5----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 5, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 6----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 6, 
+  reject req: 7, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 7----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 8, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 8----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 9, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 9----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 10----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 10, 
+  reject req: 11, 
+  reject req: 12, 
+  reject req: 13, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 11----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 14, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 12----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 13----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 14----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 15, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 15----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 16----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 16, 
+  reject req: 17, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 17----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 18----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 18, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 19----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 19, 
+  reject req: 20, 
+  reject req: 21, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 20----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 22, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 21----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 22----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 23, 
+  reject req: 24, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 23----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 25, 
+  reject req: 26, 
+  reject req: 27, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 24----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 28, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 25----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 29, 
+  reject req: 30, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 26----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 31, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 27----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 32, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 28----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 29----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 30----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 33, 
+  reject req: 34, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 31----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 35, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 32----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 36, 
+  reject req: 37, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 33----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 34----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 38, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 35----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 39, 
+  reject req: 40, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 36----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 41, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 37----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 42, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 38----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 43, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 39----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 44, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 40----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 45, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 41----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 42----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 46, 
+  reject req: 47, 
+  reject req: 48, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 43----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 44----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 49, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 45----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 50, 
+  reject req: 51, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 46----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 52, 
+  reject req: 53, 
+  reject req: 54, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 47----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 55, 
+  reject req: 56, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 48----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 57, 
+  reject req: 58, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 49----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 59, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 50----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 60, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 51----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 52----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 53----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 61, 
+  reject req: 62, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 54----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 63, 
+  reject req: 64, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 55----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 65, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 56----
+Returned items [4]
+Current inv quantity: 1
+
+Admission control using CURRENT inv, avai_inv:  1
+Threshold 0 policy
+  admit req: 66, 
+
+Allocation control with FOFS policy
+  current inv: 1
+  uncommited order: 66, order time: 56, desired time: 70
+  assign item 0 to order 66
+Send out items:  [0]
+Will be back in:  [67.0]  (realized), expected to be back in:  52
+
+Update order info
+  order 66 successful, desired time 70 :)
+
+----Period 57----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 67, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 58----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 68, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 59----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 60----
+Returned items [2]
+Current inv quantity: 1
+
+Admission control using CURRENT inv, avai_inv:  1
+Threshold 0 policy
+  admit req: 69, 
+
+Allocation control with FOFS policy
+  current inv: 1
+  uncommited order: 69, order time: 60, desired time: 72
+  assign item 2 to order 69
+Send out items:  [2]
+Will be back in:  [133.0]  (realized), expected to be back in:  50
+
+Update order info
+  order 69 successful, desired time 72 :)
+
+----Period 61----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 70, 
+  reject req: 71, 
+  reject req: 72, 
+  reject req: 73, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 62----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 74, 
+  reject req: 75, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 63----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 76, 
+  reject req: 77, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 64----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 65----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 78, 
+  reject req: 79, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 66----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 67----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 68----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 80, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 69----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 81, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 70----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 82, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 71----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 72----
+Returned items [3]
+Current inv quantity: 1
+
+Admission control using CURRENT inv, avai_inv:  1
+Threshold 0 policy
+  admit req: 83, 
+
+Allocation control with FOFS policy
+  current inv: 1
+  uncommited order: 83, order time: 72, desired time: 93
+  assign item 3 to order 83
+Send out items:  [3]
+Will be back in:  [62.0]  (realized), expected to be back in:  59
+
+Update order info
+  order 83 successful, desired time 93 :)
+
+----Period 73----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 84, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 74----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 75----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 85, 
+  reject req: 86, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 76----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 87, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 77----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 78----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 88, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 79----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 80----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 89, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 81----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 90, 
+  reject req: 91, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 82----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 83----
+Returned items [1]
+Current inv quantity: 1
+
+Admission control using CURRENT inv, avai_inv:  1
+Threshold 0 policy
+
+Allocation control with FOFS policy
+  current inv: 1
+
+Update order info
+
+----Period 84----
+Returned items []
+Current inv quantity: 1
+
+Admission control using CURRENT inv, avai_inv:  1
+Threshold 0 policy
+  admit req: 92, 
+
+Allocation control with FOFS policy
+  current inv: 1
+  uncommited order: 92, order time: 84, desired time: 99
+  assign item 1 to order 92
+Send out items:  [1]
+Will be back in:  [40.0]  (realized), expected to be back in:  53
+
+Update order info
+  order 92 successful, desired time 99 :)
+
+----Period 85----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 86----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 93, 
+  reject req: 94, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 87----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 95, 
+  reject req: 96, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 88----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 97, 
+  reject req: 98, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 89----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 99, 
+  reject req: 100, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 90----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 101, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 91----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 102, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 92----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 103, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 93----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 104, 
+  reject req: 105, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 94----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 106, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 95----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 107, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 96----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 108, 
+  reject req: 109, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 97----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 110, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 98----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 99----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 111, 
+  reject req: 112, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 100----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 113, 
+  reject req: 114, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 101----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 102----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 115, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 103----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 116, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 104----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 117, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 105----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 106----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 118, 
+  reject req: 119, 
+  reject req: 120, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 107----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 108----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 109----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 110----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 111----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 121, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 112----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 122, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 113----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 123, 
+  reject req: 124, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 114----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 125, 
+  reject req: 126, 
+  reject req: 127, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 115----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 128, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 116----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 129, 
+  reject req: 130, 
+  reject req: 131, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 117----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 132, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 118----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 133, 
+  reject req: 134, 
+  reject req: 135, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 119----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 136, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 120----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 137, 
+  reject req: 138, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 121----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 122----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 123----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 124----
+Returned items [1]
+Current inv quantity: 1
+
+Admission control using CURRENT inv, avai_inv:  1
+Threshold 0 policy
+
+Allocation control with FOFS policy
+  current inv: 1
+
+Update order info
+
+----Period 125----
+Returned items []
+Current inv quantity: 1
+
+Admission control using CURRENT inv, avai_inv:  1
+Threshold 0 policy
+  admit req: 139, 
+
+Allocation control with FOFS policy
+  current inv: 1
+  uncommited order: 139, order time: 125, desired time: 141
+  assign item 0 to order 139
+Send out items:  [0]
+Will be back in:  [58.0]  (realized), expected to be back in:  54
+
+Update order info
+  order 139 successful, desired time 141 :)
+
+----Period 126----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 127----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 140, 
+  reject req: 141, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 128----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 142, 
+  reject req: 143, 
+  reject req: 144, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 129----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 130----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 145, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 131----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 132----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 146, 
+  reject req: 147, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 133----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 148, 
+  reject req: 149, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 134----
+Returned items [3]
+Current inv quantity: 1
+
+Admission control using CURRENT inv, avai_inv:  1
+Threshold 0 policy
+  admit req: 150, 
+
+Allocation control with FOFS policy
+  current inv: 1
+  uncommited order: 150, order time: 134, desired time: 143
+  assign item 1 to order 150
+Send out items:  [1]
+Will be back in:  [83.0]  (realized), expected to be back in:  47
+
+Update order info
+  order 150 successful, desired time 143 :)
+
+----Period 135----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 151, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 136----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 152, 
+  reject req: 153, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 137----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 154, 
+  reject req: 155, 
+  reject req: 156, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 138----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 157, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 139----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 140----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 158, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 141----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 159, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 142----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 160, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 143----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 161, 
+  reject req: 162, 
+  reject req: 163, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 144----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 164, 
+  reject req: 165, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 145----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 166, 
+  reject req: 167, 
+  reject req: 168, 
+  reject req: 169, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 146----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 170, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 147----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 148----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 171, 
+  reject req: 172, 
+  reject req: 173, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 149----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 174, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 150----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 175, 
+  reject req: 176, 
+  reject req: 177, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 151----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 178, 
+  reject req: 179, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 152----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 180, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 153----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 181, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 154----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 155----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 182, 
+  reject req: 183, 
+  reject req: 184, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 156----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 185, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 157----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 158----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 186, 
+  reject req: 187, 
+  reject req: 188, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 159----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 189, 
+  reject req: 190, 
+  reject req: 191, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 160----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 192, 
+  reject req: 193, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 161----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 162----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 163----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 194, 
+  reject req: 195, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 164----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 196, 
+  reject req: 197, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 165----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 198, 
+  reject req: 199, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 166----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 200, 
+  reject req: 201, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 167----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 202, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 168----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 169----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 170----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 171----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+  reject req: 204, 
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 172----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 173----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 174----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 175----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 176----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 177----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 178----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 179----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 180----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+----Period 181----
+Returned items []
+Current inv quantity: 0
+
+Admission control using CURRENT inv, avai_inv:  0
+Threshold 0 policy
+
+Allocation control with FOFS policy
+
+Update order info
+
+Running with disp policy:  current , admit:  IT0 , alloc:  FOFS
+
+1st service rate (admission):
+  11 out of 204: 5.39 %
+2nd service rate (on-time arrival):
+  11 out of 11: 100.00 %
+Entire service rate (succ service/all req):
+  11 out of 204: 5.39 %
+Item circulation:
+  average cnt:  2.2
+  cnt for all items:  [3, 3, 2, 2, 1]

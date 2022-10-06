@@ -1,0 +1,2329 @@
+
+
+-----Parameters initialized-----: 
+ {'display_policy_wrt': 'future_cstp', 'admission_policy': 'IT0', 'allocation_policy': 'EDD', 'EDD_lead_time': 1, 'exp_stage': 'DEBUG_REQ_STORIES', 'export_data_dir': 'upper_bounds/data/', 'time_horizon': 182, 'total_items': 5, 'starting_inv': 5, 'inf_inv': 100, 'is_seed': 1, 'rand_seed': 2, 'customer_request_poisson_rate': 1, 'cycle_duration_lognormal_median': 38, 'cycle_duration_lognormal_mu': 3.615, 'cycle_duration_lognormal_sigma': 0.5073, 'customer_request_desired_time_ondmd_fixed': 3, 'customer_request_desired_time_binomial_n': 56, 'customer_request_desired_time_binomial_p': 0.25, 'length_of_delivery': 0}
+
+-----Initialization Phase-----
+
+Current inv quantity: 5
+Total inv: 5, In stock inv: 5
+Customer request full list: 
+  index: 0, will order at time: 1, desired arrival at time: 14; realized cycle duration: 12
+  index: 1, will order at time: 4, desired arrival at time: 17; realized cycle duration: 23
+  index: 2, will order at time: 5, desired arrival at time: 19; realized cycle duration: 23
+  index: 3, will order at time: 6, desired arrival at time: 20; realized cycle duration: 21
+  index: 4, will order at time: 7, desired arrival at time: 16; realized cycle duration: 27
+  index: 5, will order at time: 8, desired arrival at time: 19; realized cycle duration: 24
+  index: 6, will order at time: 9, desired arrival at time: 23; realized cycle duration: 45
+  index: 7, will order at time: 10, desired arrival at time: 26; realized cycle duration: 26
+  index: 8, will order at time: 11, desired arrival at time: 27; realized cycle duration: 19
+  index: 9, will order at time: 12, desired arrival at time: 28; realized cycle duration: 64
+  index: 10, will order at time: 13, desired arrival at time: 27; realized cycle duration: 33
+  index: 11, will order at time: 14, desired arrival at time: 34; realized cycle duration: 60
+  index: 12, will order at time: 16, desired arrival at time: 29; realized cycle duration: 48
+  index: 13, will order at time: 16, desired arrival at time: 30; realized cycle duration: 125
+  index: 14, will order at time: 18, desired arrival at time: 34; realized cycle duration: 49
+  index: 15, will order at time: 18, desired arrival at time: 35; realized cycle duration: 34
+  index: 16, will order at time: 18, desired arrival at time: 31; realized cycle duration: 42
+  index: 17, will order at time: 19, desired arrival at time: 36; realized cycle duration: 42
+  index: 18, will order at time: 19, desired arrival at time: 32; realized cycle duration: 54
+  index: 19, will order at time: 22, desired arrival at time: 38; realized cycle duration: 37
+  index: 20, will order at time: 22, desired arrival at time: 29; realized cycle duration: 31
+  index: 21, will order at time: 25, desired arrival at time: 33; realized cycle duration: 29
+  index: 22, will order at time: 26, desired arrival at time: 45; realized cycle duration: 104
+  index: 23, will order at time: 28, desired arrival at time: 38; realized cycle duration: 39
+  index: 24, will order at time: 30, desired arrival at time: 45; realized cycle duration: 20
+  index: 25, will order at time: 31, desired arrival at time: 43; realized cycle duration: 22
+  index: 26, will order at time: 32, desired arrival at time: 43; realized cycle duration: 32
+  index: 27, will order at time: 35, desired arrival at time: 48; realized cycle duration: 77
+  index: 28, will order at time: 36, desired arrival at time: 55; realized cycle duration: 78
+  index: 29, will order at time: 37, desired arrival at time: 51; realized cycle duration: 59
+  index: 30, will order at time: 38, desired arrival at time: 57; realized cycle duration: 30
+  index: 31, will order at time: 40, desired arrival at time: 56; realized cycle duration: 67
+  index: 32, will order at time: 40, desired arrival at time: 54; realized cycle duration: 66
+  index: 33, will order at time: 41, desired arrival at time: 55; realized cycle duration: 23
+  index: 34, will order at time: 41, desired arrival at time: 52; realized cycle duration: 28
+  index: 35, will order at time: 42, desired arrival at time: 48; realized cycle duration: 63
+  index: 36, will order at time: 43, desired arrival at time: 56; realized cycle duration: 27
+  index: 37, will order at time: 43, desired arrival at time: 57; realized cycle duration: 22
+  index: 38, will order at time: 45, desired arrival at time: 63; realized cycle duration: 48
+  index: 39, will order at time: 45, desired arrival at time: 60; realized cycle duration: 24
+  index: 40, will order at time: 45, desired arrival at time: 62; realized cycle duration: 30
+  index: 41, will order at time: 46, desired arrival at time: 65; realized cycle duration: 27
+  index: 42, will order at time: 46, desired arrival at time: 65; realized cycle duration: 28
+  index: 43, will order at time: 47, desired arrival at time: 64; realized cycle duration: 61
+  index: 44, will order at time: 48, desired arrival at time: 58; realized cycle duration: 77
+  index: 45, will order at time: 49, desired arrival at time: 62; realized cycle duration: 98
+  index: 46, will order at time: 49, desired arrival at time: 60; realized cycle duration: 24
+  index: 47, will order at time: 50, desired arrival at time: 68; realized cycle duration: 25
+  index: 48, will order at time: 50, desired arrival at time: 67; realized cycle duration: 53
+  index: 49, will order at time: 50, desired arrival at time: 63; realized cycle duration: 31
+  index: 50, will order at time: 51, desired arrival at time: 65; realized cycle duration: 21
+  index: 51, will order at time: 54, desired arrival at time: 71; realized cycle duration: 27
+  index: 52, will order at time: 55, desired arrival at time: 72; realized cycle duration: 79
+  index: 53, will order at time: 55, desired arrival at time: 66; realized cycle duration: 122
+  index: 54, will order at time: 56, desired arrival at time: 72; realized cycle duration: 15
+  index: 55, will order at time: 59, desired arrival at time: 76; realized cycle duration: 37
+  index: 56, will order at time: 61, desired arrival at time: 70; realized cycle duration: 80
+  index: 57, will order at time: 63, desired arrival at time: 73; realized cycle duration: 39
+  index: 58, will order at time: 63, desired arrival at time: 76; realized cycle duration: 40
+  index: 59, will order at time: 63, desired arrival at time: 74; realized cycle duration: 74
+  index: 60, will order at time: 64, desired arrival at time: 82; realized cycle duration: 48
+  index: 61, will order at time: 64, desired arrival at time: 80; realized cycle duration: 27
+  index: 62, will order at time: 64, desired arrival at time: 80; realized cycle duration: 17
+  index: 63, will order at time: 66, desired arrival at time: 82; realized cycle duration: 23
+  index: 64, will order at time: 67, desired arrival at time: 80; realized cycle duration: 14
+  index: 65, will order at time: 68, desired arrival at time: 80; realized cycle duration: 65
+  index: 66, will order at time: 69, desired arrival at time: 84; realized cycle duration: 34
+  index: 67, will order at time: 72, desired arrival at time: 85; realized cycle duration: 56
+  index: 68, will order at time: 72, desired arrival at time: 91; realized cycle duration: 45
+  index: 69, will order at time: 73, desired arrival at time: 88; realized cycle duration: 67
+  index: 70, will order at time: 74, desired arrival at time: 87; realized cycle duration: 37
+  index: 71, will order at time: 75, desired arrival at time: 92; realized cycle duration: 58
+  index: 72, will order at time: 76, desired arrival at time: 89; realized cycle duration: 39
+  index: 73, will order at time: 77, desired arrival at time: 88; realized cycle duration: 49
+  index: 74, will order at time: 77, desired arrival at time: 93; realized cycle duration: 39
+  index: 75, will order at time: 78, desired arrival at time: 92; realized cycle duration: 49
+  index: 76, will order at time: 79, desired arrival at time: 91; realized cycle duration: 25
+  index: 77, will order at time: 83, desired arrival at time: 99; realized cycle duration: 54
+  index: 78, will order at time: 83, desired arrival at time: 104; realized cycle duration: 41
+  index: 79, will order at time: 84, desired arrival at time: 96; realized cycle duration: 49
+  index: 80, will order at time: 85, desired arrival at time: 102; realized cycle duration: 50
+  index: 81, will order at time: 89, desired arrival at time: 105; realized cycle duration: 39
+  index: 82, will order at time: 89, desired arrival at time: 99; realized cycle duration: 76
+  index: 83, will order at time: 90, desired arrival at time: 107; realized cycle duration: 132
+  index: 84, will order at time: 91, desired arrival at time: 105; realized cycle duration: 39
+  index: 85, will order at time: 92, desired arrival at time: 102; realized cycle duration: 28
+  index: 86, will order at time: 93, desired arrival at time: 107; realized cycle duration: 26
+  index: 87, will order at time: 93, desired arrival at time: 105; realized cycle duration: 74
+  index: 88, will order at time: 93, desired arrival at time: 104; realized cycle duration: 52
+  index: 89, will order at time: 95, desired arrival at time: 105; realized cycle duration: 95
+  index: 90, will order at time: 97, desired arrival at time: 108; realized cycle duration: 42
+  index: 91, will order at time: 100, desired arrival at time: 113; realized cycle duration: 18
+  index: 92, will order at time: 100, desired arrival at time: 115; realized cycle duration: 13
+  index: 93, will order at time: 100, desired arrival at time: 110; realized cycle duration: 32
+  index: 94, will order at time: 102, desired arrival at time: 118; realized cycle duration: 30
+  index: 95, will order at time: 103, desired arrival at time: 113; realized cycle duration: 41
+  index: 96, will order at time: 103, desired arrival at time: 114; realized cycle duration: 23
+  index: 97, will order at time: 104, desired arrival at time: 120; realized cycle duration: 14
+  index: 98, will order at time: 105, desired arrival at time: 123; realized cycle duration: 22
+  index: 99, will order at time: 106, desired arrival at time: 127; realized cycle duration: 46
+  index: 100, will order at time: 106, desired arrival at time: 121; realized cycle duration: 14
+  index: 101, will order at time: 108, desired arrival at time: 122; realized cycle duration: 23
+  index: 102, will order at time: 108, desired arrival at time: 118; realized cycle duration: 36
+  index: 103, will order at time: 108, desired arrival at time: 122; realized cycle duration: 53
+  index: 104, will order at time: 109, desired arrival at time: 120; realized cycle duration: 46
+  index: 105, will order at time: 109, desired arrival at time: 123; realized cycle duration: 60
+  index: 106, will order at time: 111, desired arrival at time: 126; realized cycle duration: 56
+  index: 107, will order at time: 111, desired arrival at time: 128; realized cycle duration: 16
+  index: 108, will order at time: 111, desired arrival at time: 123; realized cycle duration: 10
+  index: 109, will order at time: 112, desired arrival at time: 134; realized cycle duration: 62
+  index: 110, will order at time: 114, desired arrival at time: 137; realized cycle duration: 40
+  index: 111, will order at time: 114, desired arrival at time: 131; realized cycle duration: 57
+  index: 112, will order at time: 115, desired arrival at time: 131; realized cycle duration: 40
+  index: 113, will order at time: 115, desired arrival at time: 131; realized cycle duration: 53
+  index: 114, will order at time: 116, desired arrival at time: 134; realized cycle duration: 53
+  index: 115, will order at time: 116, desired arrival at time: 136; realized cycle duration: 72
+  index: 116, will order at time: 116, desired arrival at time: 133; realized cycle duration: 44
+  index: 117, will order at time: 118, desired arrival at time: 133; realized cycle duration: 20
+  index: 118, will order at time: 119, desired arrival at time: 128; realized cycle duration: 64
+  index: 119, will order at time: 119, desired arrival at time: 134; realized cycle duration: 90
+  index: 120, will order at time: 120, desired arrival at time: 133; realized cycle duration: 120
+  index: 121, will order at time: 120, desired arrival at time: 131; realized cycle duration: 64
+  index: 122, will order at time: 122, desired arrival at time: 140; realized cycle duration: 61
+  index: 123, will order at time: 123, desired arrival at time: 140; realized cycle duration: 55
+  index: 124, will order at time: 126, desired arrival at time: 140; realized cycle duration: 95
+  index: 125, will order at time: 127, desired arrival at time: 141; realized cycle duration: 30
+  index: 126, will order at time: 131, desired arrival at time: 145; realized cycle duration: 29
+  index: 127, will order at time: 132, desired arrival at time: 144; realized cycle duration: 35
+  index: 128, will order at time: 133, desired arrival at time: 146; realized cycle duration: 21
+  index: 129, will order at time: 135, desired arrival at time: 148; realized cycle duration: 77
+  index: 130, will order at time: 137, desired arrival at time: 144; realized cycle duration: 16
+  index: 131, will order at time: 138, desired arrival at time: 156; realized cycle duration: 46
+  index: 132, will order at time: 140, desired arrival at time: 148; realized cycle duration: 27
+  index: 133, will order at time: 141, desired arrival at time: 154; realized cycle duration: 23
+  index: 134, will order at time: 142, desired arrival at time: 152; realized cycle duration: 37
+  index: 135, will order at time: 143, desired arrival at time: 154; realized cycle duration: 44
+  index: 136, will order at time: 143, desired arrival at time: 162; realized cycle duration: 28
+  index: 137, will order at time: 143, desired arrival at time: 156; realized cycle duration: 48
+  index: 138, will order at time: 146, desired arrival at time: 162; realized cycle duration: 30
+  index: 139, will order at time: 147, desired arrival at time: 157; realized cycle duration: 83
+  index: 140, will order at time: 148, desired arrival at time: 160; realized cycle duration: 31
+  index: 141, will order at time: 150, desired arrival at time: 168; realized cycle duration: 47
+  index: 142, will order at time: 150, desired arrival at time: 168; realized cycle duration: 33
+  index: 143, will order at time: 151, desired arrival at time: 163; realized cycle duration: 67
+  index: 144, will order at time: 151, desired arrival at time: 171; realized cycle duration: 30
+  index: 145, will order at time: 152, desired arrival at time: 167; realized cycle duration: 25
+  index: 146, will order at time: 152, desired arrival at time: 166; realized cycle duration: 30
+  index: 147, will order at time: 156, desired arrival at time: 169; realized cycle duration: 92
+  index: 148, will order at time: 157, desired arrival at time: 170; realized cycle duration: 26
+  index: 149, will order at time: 157, desired arrival at time: 177; realized cycle duration: 26
+  index: 150, will order at time: 160, desired arrival at time: 176; realized cycle duration: 63
+  index: 151, will order at time: 163, desired arrival at time: 177; realized cycle duration: 74
+  index: 152, will order at time: 164, desired arrival at time: 173; realized cycle duration: 31
+  index: 153, will order at time: 165, desired arrival at time: 177; realized cycle duration: 28
+  index: 157, will order at time: 175, desired arrival at time: 182; realized cycle duration: 36
+Item returning flow: 
+
+----Period 0----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 1----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 0,  predicted inv at time: 14 is 5
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 2----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 3----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 4----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 1,  predicted inv at time: 17 is 4
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 5----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 2,  predicted inv at time: 19 is 3
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 6----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 3,  predicted inv at time: 20 is 2
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 7----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 4,  predicted inv at time: 16 is 4
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 8----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 5,  predicted inv at time: 19 is 2
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 9----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 6,  predicted inv at time: 23 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 10----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 7,  predicted inv at time: 26 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 11----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 8,  predicted inv at time: 27 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 12----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 9,  predicted inv at time: 28 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+
+Update order info
+
+----Period 13----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 10,  predicted inv at time: 27 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 5
+  uncommited eligible order: 0, order time: 1, desired time: 14
+  assign item 0 to order 0
+Send out items:  [0]
+Will be back in:  [13.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 0 successful, desired time 14 :)
+
+----Period 14----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 11,  predicted inv at time: 34 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 4
+
+Update order info
+
+----Period 15----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 4
+  uncommited eligible order: 4, order time: 7, desired time: 16
+  assign item 1 to order 4
+Send out items:  [1]
+Will be back in:  [28.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 4 successful, desired time 16 :)
+
+----Period 16----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 12,  predicted inv at time: 29 is -1
+  reject req: 13,  predicted inv at time: 30 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 3
+  uncommited eligible order: 1, order time: 4, desired time: 17
+  assign item 2 to order 1
+Send out items:  [2]
+Will be back in:  [24.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 1 successful, desired time 17 :)
+
+----Period 17----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 2
+
+Update order info
+
+----Period 18----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 14,  predicted inv at time: 34 is -1
+  reject req: 15,  predicted inv at time: 35 is -1
+  reject req: 16,  predicted inv at time: 31 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 2
+  uncommited eligible order: 2, order time: 5, desired time: 19
+  uncommited eligible order: 5, order time: 8, desired time: 19
+  assign item 3 to order 2
+  assign item 4 to order 5
+Send out items:  [3, 4]
+Will be back in:  [24.0, 25.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 2 successful, desired time 19 :)
+  order 5 successful, desired time 19 :)
+
+----Period 19----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 17,  predicted inv at time: 36 is -1
+  reject req: 18,  predicted inv at time: 32 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 20----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 3 expired and failed, desired time 20 :(
+
+----Period 21----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 22----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 19,  predicted inv at time: 38 is 0
+  reject req: 20,  predicted inv at time: 29 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 23----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 24----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 25----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 21,  predicted inv at time: 33 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 26----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 22,  predicted inv at time: 45 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 27----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 28----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 23,  predicted inv at time: 38 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 29----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 30----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 24,  predicted inv at time: 45 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 31----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 25,  predicted inv at time: 43 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 32----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 26,  predicted inv at time: 43 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 33----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 34----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 35----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 27,  predicted inv at time: 48 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 36----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 28,  predicted inv at time: 55 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 37----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 29,  predicted inv at time: 51 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 38----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 30,  predicted inv at time: 57 is 2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 23 expired and failed, desired time 38 :(
+
+----Period 39----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 40----
+Returned items [2]
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 31,  predicted inv at time: 56 is 1
+  admit req: 32,  predicted inv at time: 54 is 2
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 41----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 33,  predicted inv at time: 55 is 1
+  admit req: 34,  predicted inv at time: 52 is 1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 42----
+Returned items [3]
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 35,  predicted inv at time: 48 is 2
+
+Allocation control with EDD policy, lead time 1
+  current inv: 2
+
+Update order info
+
+----Period 43----
+Returned items [1, 4]
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 36,  predicted inv at time: 56 is -1
+  reject req: 37,  predicted inv at time: 57 is -2
+
+Allocation control with EDD policy, lead time 1
+  current inv: 4
+
+Update order info
+
+----Period 44----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 4
+  uncommited eligible order: 22, order time: 26, desired time: 45
+  assign item 0 to order 22
+Send out items:  [0]
+Will be back in:  [105.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 22 successful, desired time 45 :)
+
+----Period 45----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 38,  predicted inv at time: 63 is -3
+  reject req: 39,  predicted inv at time: 60 is -3
+  reject req: 40,  predicted inv at time: 62 is -3
+
+Allocation control with EDD policy, lead time 1
+  current inv: 3
+
+Update order info
+
+----Period 46----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 41,  predicted inv at time: 65 is -3
+  reject req: 42,  predicted inv at time: 65 is -3
+
+Allocation control with EDD policy, lead time 1
+  current inv: 3
+
+Update order info
+
+----Period 47----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 43,  predicted inv at time: 64 is -3
+
+Allocation control with EDD policy, lead time 1
+  current inv: 3
+  uncommited eligible order: 35, order time: 42, desired time: 48
+  assign item 1 to order 35
+Send out items:  [1]
+Will be back in:  [64.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 35 successful, desired time 48 :)
+
+----Period 48----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 44,  predicted inv at time: 58 is -3
+
+Allocation control with EDD policy, lead time 1
+  current inv: 2
+
+Update order info
+
+----Period 49----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 45,  predicted inv at time: 62 is -3
+  reject req: 46,  predicted inv at time: 60 is -3
+
+Allocation control with EDD policy, lead time 1
+  current inv: 2
+
+Update order info
+
+----Period 50----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 47,  predicted inv at time: 68 is -3
+  reject req: 48,  predicted inv at time: 67 is -3
+  reject req: 49,  predicted inv at time: 63 is -3
+
+Allocation control with EDD policy, lead time 1
+  current inv: 2
+
+Update order info
+
+----Period 51----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 50,  predicted inv at time: 65 is -3
+
+Allocation control with EDD policy, lead time 1
+  current inv: 2
+  uncommited eligible order: 34, order time: 41, desired time: 52
+  assign item 2 to order 34
+Send out items:  [2]
+Will be back in:  [29.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 34 successful, desired time 52 :)
+
+----Period 52----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 53----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+  uncommited eligible order: 32, order time: 40, desired time: 54
+  assign item 3 to order 32
+Send out items:  [3]
+Will be back in:  [67.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 32 successful, desired time 54 :)
+
+----Period 54----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 51,  predicted inv at time: 71 is -3
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 55----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 52,  predicted inv at time: 72 is -3
+  reject req: 53,  predicted inv at time: 66 is -3
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 28 expired and failed, desired time 55 :(
+  order 33 expired and failed, desired time 55 :(
+
+----Period 56----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 54,  predicted inv at time: 72 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 31 expired and failed, desired time 56 :(
+
+----Period 57----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 30 expired and failed, desired time 57 :(
+
+----Period 58----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 59----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 55,  predicted inv at time: 76 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 60----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 61----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 56,  predicted inv at time: 70 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 62----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 63----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 57,  predicted inv at time: 73 is 0
+  reject req: 58,  predicted inv at time: 76 is 0
+  reject req: 59,  predicted inv at time: 74 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 64----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 60,  predicted inv at time: 82 is -1
+  reject req: 61,  predicted inv at time: 80 is -1
+  reject req: 62,  predicted inv at time: 80 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 65----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 66----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 63,  predicted inv at time: 82 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 67----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 64,  predicted inv at time: 80 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 68----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 65,  predicted inv at time: 80 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 69----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 66,  predicted inv at time: 84 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 70----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 56 expired and failed, desired time 70 :(
+
+----Period 71----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 72----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 67,  predicted inv at time: 85 is 1
+  admit req: 68,  predicted inv at time: 91 is 2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 73----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 69,  predicted inv at time: 88 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 74----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 70,  predicted inv at time: 87 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 75----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 71,  predicted inv at time: 92 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 76----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 72,  predicted inv at time: 89 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 55 expired and failed, desired time 76 :(
+
+----Period 77----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 73,  predicted inv at time: 88 is 1
+  reject req: 74,  predicted inv at time: 93 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 78----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 75,  predicted inv at time: 92 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 79----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 76,  predicted inv at time: 91 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 80----
+Returned items [2]
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 81----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 82----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 83----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 77,  predicted inv at time: 99 is 0
+  reject req: 78,  predicted inv at time: 104 is 0
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 84----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 79,  predicted inv at time: 96 is 0
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+  uncommited eligible order: 67, order time: 72, desired time: 85
+  assign item 2 to order 67
+Send out items:  [2]
+Will be back in:  [57.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 67 successful, desired time 85 :)
+
+----Period 85----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 80,  predicted inv at time: 102 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 86----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 87----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 70 expired and failed, desired time 87 :(
+
+----Period 88----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 69 expired and failed, desired time 88 :(
+  order 73 expired and failed, desired time 88 :(
+
+----Period 89----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 81,  predicted inv at time: 105 is 3
+  admit req: 82,  predicted inv at time: 99 is 3
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 90----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 83,  predicted inv at time: 107 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 91----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 84,  predicted inv at time: 105 is 2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 68 expired and failed, desired time 91 :(
+
+----Period 92----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 85,  predicted inv at time: 102 is 3
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 93----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 86,  predicted inv at time: 107 is 0
+  admit req: 87,  predicted inv at time: 105 is 2
+  admit req: 88,  predicted inv at time: 104 is 2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 94----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 95----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 89,  predicted inv at time: 105 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 96----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 97----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 90,  predicted inv at time: 108 is -4
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 98----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 99----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 82 expired and failed, desired time 99 :(
+
+----Period 100----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 91,  predicted inv at time: 113 is -3
+  reject req: 92,  predicted inv at time: 115 is -3
+  reject req: 93,  predicted inv at time: 110 is -3
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 101----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 102----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 94,  predicted inv at time: 118 is -3
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 85 expired and failed, desired time 102 :(
+
+----Period 103----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 95,  predicted inv at time: 113 is -2
+  reject req: 96,  predicted inv at time: 114 is -2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 104----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 97,  predicted inv at time: 120 is -2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 88 expired and failed, desired time 104 :(
+
+----Period 105----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 98,  predicted inv at time: 123 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 81 expired and failed, desired time 105 :(
+  order 84 expired and failed, desired time 105 :(
+  order 87 expired and failed, desired time 105 :(
+  order 89 expired and failed, desired time 105 :(
+
+----Period 106----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 99,  predicted inv at time: 127 is 4
+  admit req: 100,  predicted inv at time: 121 is 3
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 107----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 83 expired and failed, desired time 107 :(
+
+----Period 108----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 101,  predicted inv at time: 122 is 3
+  admit req: 102,  predicted inv at time: 118 is 4
+  admit req: 103,  predicted inv at time: 122 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 109----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 104,  predicted inv at time: 120 is 3
+  reject req: 105,  predicted inv at time: 123 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 110----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 111----
+Returned items [1]
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 106,  predicted inv at time: 126 is 0
+  reject req: 107,  predicted inv at time: 128 is -1
+  reject req: 108,  predicted inv at time: 123 is 0
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 112----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 109,  predicted inv at time: 134 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 113----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 114----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 110,  predicted inv at time: 137 is -1
+  reject req: 111,  predicted inv at time: 131 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 115----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 112,  predicted inv at time: 131 is -1
+  reject req: 113,  predicted inv at time: 131 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 116----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 114,  predicted inv at time: 134 is -1
+  reject req: 115,  predicted inv at time: 136 is -1
+  reject req: 116,  predicted inv at time: 133 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 117----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+  uncommited eligible order: 102, order time: 108, desired time: 118
+  assign item 1 to order 102
+Send out items:  [1]
+Will be back in:  [37.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 102 successful, desired time 118 :)
+
+----Period 118----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 117,  predicted inv at time: 133 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 119----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 118,  predicted inv at time: 128 is -1
+  reject req: 119,  predicted inv at time: 134 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 120----
+Returned items [3]
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 120,  predicted inv at time: 133 is -1
+  reject req: 121,  predicted inv at time: 131 is -1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+  uncommited eligible order: 104, order time: 109, desired time: 120
+  uncommited eligible order: 100, order time: 106, desired time: 121
+  assign item 3 to order 104
+Send out items:  [3]
+Will be back in:  [46.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 104 successful, desired time 120 :)
+
+----Period 121----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 100 expired and failed, desired time 121 :(
+
+----Period 122----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 122,  predicted inv at time: 140 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 101 expired and failed, desired time 122 :(
+  order 103 expired and failed, desired time 122 :(
+
+----Period 123----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 123,  predicted inv at time: 140 is 2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 124----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 125----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 126----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 124,  predicted inv at time: 140 is 2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 127----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 125,  predicted inv at time: 141 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 99 expired and failed, desired time 127 :(
+
+----Period 128----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 129----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 130----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 131----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 126,  predicted inv at time: 145 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 132----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 127,  predicted inv at time: 144 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 133----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 128,  predicted inv at time: 146 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 134----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 135----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 129,  predicted inv at time: 148 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 136----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 137----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 130,  predicted inv at time: 144 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 138----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 131,  predicted inv at time: 156 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 139----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 140----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 132,  predicted inv at time: 148 is -2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 123 expired and failed, desired time 140 :(
+  order 124 expired and failed, desired time 140 :(
+
+----Period 141----
+Returned items [2]
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 133,  predicted inv at time: 154 is 0
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 142----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 134,  predicted inv at time: 152 is 0
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 143----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 135,  predicted inv at time: 154 is 0
+  admit req: 136,  predicted inv at time: 162 is 2
+  admit req: 137,  predicted inv at time: 156 is 1
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+  uncommited eligible order: 127, order time: 132, desired time: 144
+  uncommited eligible order: 130, order time: 137, desired time: 144
+  assign item 2 to order 127
+Send out items:  [2]
+Will be back in:  [36.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 127 successful, desired time 144 :)
+
+----Period 144----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 130 expired and failed, desired time 144 :(
+
+----Period 145----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 126 expired and failed, desired time 145 :(
+
+----Period 146----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 138,  predicted inv at time: 162 is 3
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 147----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 139,  predicted inv at time: 157 is 2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 148----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 140,  predicted inv at time: 160 is 2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 149----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 150----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 141,  predicted inv at time: 168 is -1
+  reject req: 142,  predicted inv at time: 168 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 151----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 143,  predicted inv at time: 163 is -1
+  reject req: 144,  predicted inv at time: 171 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 152----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 145,  predicted inv at time: 167 is -1
+  reject req: 146,  predicted inv at time: 166 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 153----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 154----
+Returned items [1]
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 155----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+  uncommited eligible order: 137, order time: 143, desired time: 156
+  assign item 0 to order 137
+Send out items:  [0]
+Will be back in:  [49.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 137 successful, desired time 156 :)
+
+----Period 156----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 147,  predicted inv at time: 169 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 157----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 148,  predicted inv at time: 170 is -1
+  reject req: 149,  predicted inv at time: 177 is -1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 139 expired and failed, desired time 157 :(
+
+----Period 158----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 159----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 160----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  reject req: 150,  predicted inv at time: 176 is 0
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 140 expired and failed, desired time 160 :(
+
+----Period 161----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 162----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 136 expired and failed, desired time 162 :(
+  order 138 expired and failed, desired time 162 :(
+
+----Period 163----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 151,  predicted inv at time: 177 is 3
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 164----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 152,  predicted inv at time: 173 is 3
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 165----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 153,  predicted inv at time: 177 is 2
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 166----
+Returned items [3]
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 167----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 168----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 169----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 170----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 171----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 172----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+  uncommited eligible order: 152, order time: 164, desired time: 173
+  assign item 1 to order 152
+Send out items:  [1]
+Will be back in:  [32.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 152 successful, desired time 173 :)
+
+----Period 173----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 174----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 175----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+  admit req: 157,  predicted inv at time: 182 is 1
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 176----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 177----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+  order 151 expired and failed, desired time 177 :(
+  order 153 expired and failed, desired time 177 :(
+
+----Period 178----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+
+Update order info
+
+----Period 179----
+Returned items [2]
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 180----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+
+Update order info
+
+----Period 181----
+Returned items []
+
+Admission control using FUTURE_CSTP inv
+Threshold 0 policy
+
+Allocation control with EDD policy, lead time 1
+  current inv: 1
+  uncommited eligible order: 157, order time: 175, desired time: 182
+  assign item 2 to order 157
+Send out items:  [2]
+Will be back in:  [37.0]  (realized), expected to be back in:  39
+
+Update order info
+  order 157 successful, desired time 182 :)
+
+Running with disp policy:  future_cstp , admit:  IT0 , alloc:  EDD
+ with EDD lead time:  1
+
+1st service rate (admission):
+  50 out of 155: 32.26 %
+2nd service rate (on-time arrival):
+  16 out of 50: 32.00 %
+Entire service rate (succ service/all req):
+  16 out of 155: 10.32 %
+Item circulation:
+  average cnt:  3.2
+  cnt for all items:  [3, 4, 5, 3, 1]

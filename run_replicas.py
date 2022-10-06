@@ -19,12 +19,23 @@ args = parser.parse_args()
 disp_pol = ['current', 'future', 'future_cstp']
 adm_pol = ['IT0', 'ITInf']
 alloc_pol = ['FOFS', 'EDD']
+EDD_leadtime = [1, 2, 3, 4, 5, 6]
+diagnosis_story = 0
 
-# (8/18) test schedule method
+# # (9/7) test diagnosis (req stories)
+# disp_pol = ['current'] #['current', 'future', 'future_cstp']
+# adm_pol = ['IT0'] #['IT0', 'ITInf']
+# alloc_pol = ['FOFS'] #['FOFS', 'EDD']
+# EDD_leadtime = [1] #[1, 2, 3, 4, 5, 6]
+# diagnosis_story = 1
+
+# # (8/18) test schedule method
 # disp_pol = ['NomiSchCpl']
 # adm_pol = ['NomiSchCpl']
 # alloc_pol = ["NomiSch"]
-EDD_leadtime = [1, 2, 3, 4, 5, 6]
+# EDD_leadtime = [1]
+# diagnosis_story = 0
+
 rseeds = list(range(1, 31))
 
 exp_stage = args.stage
@@ -33,6 +44,7 @@ is_all_config = args.allconfig
 
 for rand_seed in rseeds:
     parameters_main.update({'rand_seed': rand_seed})
+    parameters_main.update({'diagnosis_story_output': diagnosis_story})
 
     file_name = '_'.join([exp_stage, 'all'+str(is_all_config), 'rseed'+str(rand_seed)])
     stdout_file_name = file_name + '.txt'
@@ -50,7 +62,7 @@ for rand_seed in rseeds:
                 if alloc == 'FOFS' or alloc == 'NomiSch':
                     simul = MainSimulator(parameters_config, parameters_main, parameters_dist)
                     simul.initialize()
-                    num_req, adm_rate, succ_order_rate, service_rate = simul.run_and_report(debug_truncate_time=None)
+                    num_req, adm_rate, succ_order_rate, service_rate, req_stories = simul.run_and_report(debug_truncate_time=None)
 
                     index = '-'.join([alloc, adm, disp])
                     res_index_list.append(index)
@@ -62,12 +74,18 @@ for rand_seed in rseeds:
                         parameters_config.update({'EDD_lead_time': lt})
                         simul = MainSimulator(parameters_config, parameters_main, parameters_dist)
                         simul.initialize()
-                        num_req, adm_rate, succ_order_rate, service_rate = simul.run_and_report(debug_truncate_time=None)
+                        num_req, adm_rate, succ_order_rate, service_rate, req_stories = simul.run_and_report(debug_truncate_time=None)
 
                         index = '-'.join([alloc, str(lt), adm, disp])
                         res_index_list.append(index)
                         res_list.append({'rseed': rand_seed, 'num_req': num_req, 'adm_rate': round(adm_rate,4),
                                          'succ_order_rate': round(succ_order_rate,4), 'service_rate': round(service_rate,4)})
+
+                # save stories for each rseed, policy combination (one case)
+                if diagnosis_story == 1:
+                    story_file_name = index + "_" + file_name + ".csv"
+                    story_file_name = os.path.join("diagnosis", story_file_name)
+                    req_stories.to_csv(story_file_name)
 
     sys.stdout.close()
 

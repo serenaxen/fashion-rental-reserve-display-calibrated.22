@@ -103,7 +103,7 @@ def NS_alloc(inventory, orders, schedule, length_of_delivery, median_cycle_durat
             od_realized_cycle_duration.update({od.req_index: od.realized_cycle_duration})
 
         elif od.req_index in failed_orders:
-            od.fail_order()
+            od.fail_order(t)
 
     # update info for committed items
     desired_dates = []

@@ -2,7 +2,7 @@ import os
 import sys
 import pandas as pd
 
-file_prefix = 'DEBUG_CALIBRATED_all1'
+file_prefix = 'DEBUG_LOGNORMAL_CYCLES_all1'
 dirpath = sys.path[0]
 save_file = 'DEBUG_LOGNORMAL_CYCLES_all1_results.csv'
 

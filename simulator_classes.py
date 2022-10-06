@@ -86,30 +86,27 @@ class Inventory:
     def take_inv_items_list(self):
         return [it for it in self.items if it.status == 1]
 
-    def sendout_items(self, item_index_list, rp_list):
-        median_cycle_duration = self.paras['cycle_duration_lognormal_median']
+    def sendout_items(self, item_index_list, errp_list, rp_list):
         for i in range(len(item_index_list)):
-            self.items[item_index_list[i]].send_out(rp_list[i], median_cycle_duration)
+            self.items[item_index_list[i]].send_out(rp_list[i], errp_list[i])
             self.current_inv -= 1
         print("Send out items: ", item_index_list)
-        print("Will be back in: ", rp_list, " (realized), expected to be back in: ", median_cycle_duration)
+        print("Will be back in: ", rp_list, " (realized), expected to be back in: ", errp_list[i])
 
-    def predict_future_inv_median_cycle(self, time, future_time, inv_occup_record, uncmtd_cnt, use_uncmtd=0):
-        future_inv = 0
+    def predict_future_inv_median_cycle(self, time, future_time, inv_occup_record):
+        current_inv = 0
+        future_exp_return = 0
         for it in self.items: # inv + on time now could come back before a future time
             if it.status == 1:
-                future_inv += 1
+                current_inv += 1
             elif it.status == 0:
                 if time + it.exp_regular_return_periods <= future_time: # note: all the overdue items are counted too
-                    future_inv += 1
+                    future_exp_return += 1
 
         num_occupied_items = inv_occup_record[future_time]
-        future_inv = future_inv - num_occupied_items
+        future_raw_inv = current_inv + future_exp_return - num_occupied_items
 
-        if use_uncmtd == 1:
-            future_inv = future_inv - uncmtd_cnt
-
-        return future_inv
+        return future_raw_inv, current_inv, future_exp_return, num_occupied_items
 
     def report_current_inv(self):
         print("Current inv quantity:", self.current_inv)
@@ -158,6 +155,17 @@ class CustomerRequest:
     def reject(self):
         self.status = -1
 
+    def write_story_when_admit_by_current(self, current_inv):
+        self.toa_current_inv = current_inv
+
+    def write_story_when_admit_by_predict(self, inv_ref, current_inv, future_exp_return, num_occupied_items, use_uncmtd = 0, uncmtd_cnt = 0):
+        self.toa_current_inv = current_inv
+        self.toa_future_exp_return = future_exp_return
+        self.toa_occupied_by_pred_same_period = num_occupied_items
+        self.predict_with_uncmtd = use_uncmtd
+        self.toa_uncmtd_cnt = uncmtd_cnt
+        self.toa_inv_ref = inv_ref
+
 
 class CustomerOrder: #only for admitted (available & chosen) requests
     def __init__(self, req_index, order_time, desired_periods, realized_cycle_duration):
@@ -175,12 +183,14 @@ class CustomerOrder: #only for admitted (available & chosen) requests
         self.commit_time = commit_time
         print("  assign item %d to order %d" % (item_index, self.req_index))
 
-    def finish_order(self):
+    def finish_order(self, finish_time):
         self.status = 2 # 2 for "success"
+        self.finish_time = finish_time
         print("  order %d successful, desired time %s :)" % (self.req_index, self.desired_time))
 
-    def fail_order(self):
+    def fail_order(self, fail_time):
         self.status = -2 # -2 for "failure"
+        self.fail_time = fail_time
         print("  order %d expired and failed, desired time %s :(" %(self.req_index, self.desired_time))
 
     # def save_later_order(self):
@@ -194,9 +204,10 @@ class NominalSchedule:
         self.ns_assign_item = {}
         self.on_schedule_req_list = []
 
-    def initialize(self, initial_rt_flow):
-        self.num_items = len(initial_rt_flow)
-        self.item_exp_release_time = {rt[0]: rt[2] for rt in initial_rt_flow} #key-value in form of item_index: errp. see Inventory.report__return_flow for details
+    def initialize(self, num_items, initial_rt_flow):
+        self.num_items = num_items
+        self.item_exp_release_time = {item: 0 for item in range(num_items)}
+        self.item_exp_release_time.update({rt[0]: rt[1] for rt in initial_rt_flow}) #key-value in form of item_index: errp. see Inventory.report__return_flow for details
 
     def reschedule_for_one_new_request(self, cr, median_cycle_duration, t, T): #t stands for current time
         new_req_index = cr.index
@@ -222,6 +233,15 @@ class NominalSchedule:
         ns_start.update({new_req_index: new_req_desired_time})
         ns_length = self.ns_length.copy()
         ns_length.update({new_req_index: new_req_exp_length})
+
+        # # DEBUG
+        # print("Scheduling debug!")
+        # if req_index_list[0] == 0: #the first one
+        #     print(req_index_list)
+        #     print(ns_start)
+        #     print(ns_length)
+        #     print(self.num_items)
+        #     print(self.item_exp_release_time)
 
         obj_val, updated_assign = model_complete_reschedule(req_index_list, ns_start, ns_length,
                                             self.num_items, self.item_exp_release_time.copy(), t, T)
@@ -260,24 +280,24 @@ class NominalSchedule:
                 affected_req_index = req_index
                 return affected_req_index #Note: here we may have a invalid schedule before further processing
 
-    def reschedule_for_one_item_delay(self, affected_req_index):
-        updated_assign = self.__model_complete_reschedule_for_delay()
-        if updated_assign: #available YES
-            self.ns_assign_item = updated_assign
-            return True
-        else: # have to fail the affected req
-            self.fail_order_one(affected_req_index)
-            return False
+    # def reschedule_for_one_item_delay(self, affected_req_index):
+    #     updated_assign = self.__model_complete_reschedule_for_delay()
+    #     if updated_assign: #available YES
+    #         self.ns_assign_item = updated_assign
+    #         return True
+    #     else: # have to fail the affected req
+    #         self.fail_order_one(affected_req_index)
+    #         return False
 
-    def __model_complete_reschedule_for_delay(self):
-        obj_val, updated_assign = model_complete_reschedule(self.on_schedule_req_list.copy(), self.ns_start.copy(), self.ns_length.copy(),
-                                                            self.num_items, self.item_exp_release_time.copy(), t, T)
-
-        if obj_val == len(self.on_schedule_req_list): # can resolve conflict
-            return updated_assign
+    # def __model_complete_reschedule_for_delay(self):
+    #     obj_val, updated_assign = model_complete_reschedule(self.on_schedule_req_list.copy(), self.ns_start.copy(), self.ns_length.copy(),
+    #                                                         self.num_items, self.item_exp_release_time.copy(), t, T)
+    #
+    #     if obj_val == len(self.on_schedule_req_list): # can resolve conflict
+    #         return updated_assign
 
     # def check_schedule_validity(self): # for safety
-    # TODO: do a overall debug after one time reporting
+
 
 # TEST BELOW (outdated)
 # initial_rt_flow = [[0, 3, 1], [1, 0, 0], [2, 5, 3]]

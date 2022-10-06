@@ -1,0 +1,1533 @@
+
+
+-----Parameters initialized-----: 
+ {'display_policy_wrt': 'NomiSchCpl', 'admission_policy': 'NomiSchCpl', 'allocation_policy': 'NomiSch', 'EDD_lead_time': 2, 'exp_stage': 'DEBUG_NOMISCH', 'export_data_dir': 'upper_bounds/data/', 'time_horizon': 182, 'total_items': 5, 'starting_inv': 5, 'inf_inv': 100, 'is_seed': 1, 'rand_seed': 6, 'customer_request_poisson_rate': 1, 'cycle_duration_lognormal_median': 38, 'cycle_duration_lognormal_mu': 3.615, 'cycle_duration_lognormal_sigma': 0.5073, 'customer_request_desired_time_ondmd_fixed': 3, 'customer_request_desired_time_binomial_n': 56, 'customer_request_desired_time_binomial_p': 0.25, 'length_of_delivery': 0}
+
+-----Initialization Phase-----
+
+Current inv quantity: 5
+Total inv: 5, In stock inv: 5
+Customer request full list: 
+  index: 0, will order at time: 0, desired arrival at time: 15; realized cycle duration: 20
+  index: 1, will order at time: 1, desired arrival at time: 13; realized cycle duration: 68
+  index: 2, will order at time: 1, desired arrival at time: 8; realized cycle duration: 34
+  index: 3, will order at time: 5, desired arrival at time: 15; realized cycle duration: 32
+  index: 4, will order at time: 7, desired arrival at time: 20; realized cycle duration: 57
+  index: 5, will order at time: 7, desired arrival at time: 17; realized cycle duration: 39
+  index: 6, will order at time: 8, desired arrival at time: 19; realized cycle duration: 33
+  index: 7, will order at time: 9, desired arrival at time: 25; realized cycle duration: 54
+  index: 8, will order at time: 10, desired arrival at time: 24; realized cycle duration: 27
+  index: 9, will order at time: 10, desired arrival at time: 20; realized cycle duration: 29
+  index: 10, will order at time: 11, desired arrival at time: 22; realized cycle duration: 30
+  index: 11, will order at time: 12, desired arrival at time: 31; realized cycle duration: 35
+  index: 12, will order at time: 12, desired arrival at time: 19; realized cycle duration: 48
+  index: 13, will order at time: 13, desired arrival at time: 28; realized cycle duration: 49
+  index: 14, will order at time: 13, desired arrival at time: 28; realized cycle duration: 81
+  index: 15, will order at time: 13, desired arrival at time: 28; realized cycle duration: 34
+  index: 16, will order at time: 13, desired arrival at time: 28; realized cycle duration: 32
+  index: 17, will order at time: 14, desired arrival at time: 31; realized cycle duration: 85
+  index: 18, will order at time: 14, desired arrival at time: 31; realized cycle duration: 26
+  index: 19, will order at time: 15, desired arrival at time: 30; realized cycle duration: 30
+  index: 20, will order at time: 18, desired arrival at time: 29; realized cycle duration: 31
+  index: 21, will order at time: 18, desired arrival at time: 34; realized cycle duration: 42
+  index: 22, will order at time: 18, desired arrival at time: 30; realized cycle duration: 30
+  index: 23, will order at time: 18, desired arrival at time: 35; realized cycle duration: 41
+  index: 24, will order at time: 19, desired arrival at time: 33; realized cycle duration: 36
+  index: 25, will order at time: 19, desired arrival at time: 29; realized cycle duration: 23
+  index: 26, will order at time: 21, desired arrival at time: 39; realized cycle duration: 56
+  index: 27, will order at time: 21, desired arrival at time: 35; realized cycle duration: 43
+  index: 28, will order at time: 22, desired arrival at time: 41; realized cycle duration: 71
+  index: 29, will order at time: 24, desired arrival at time: 33; realized cycle duration: 37
+  index: 30, will order at time: 24, desired arrival at time: 34; realized cycle duration: 45
+  index: 31, will order at time: 24, desired arrival at time: 40; realized cycle duration: 41
+  index: 32, will order at time: 26, desired arrival at time: 35; realized cycle duration: 39
+  index: 33, will order at time: 26, desired arrival at time: 40; realized cycle duration: 45
+  index: 34, will order at time: 27, desired arrival at time: 44; realized cycle duration: 40
+  index: 35, will order at time: 27, desired arrival at time: 40; realized cycle duration: 43
+  index: 36, will order at time: 27, desired arrival at time: 38; realized cycle duration: 58
+  index: 37, will order at time: 28, desired arrival at time: 45; realized cycle duration: 36
+  index: 38, will order at time: 29, desired arrival at time: 39; realized cycle duration: 18
+  index: 39, will order at time: 30, desired arrival at time: 42; realized cycle duration: 47
+  index: 40, will order at time: 31, desired arrival at time: 42; realized cycle duration: 20
+  index: 41, will order at time: 31, desired arrival at time: 45; realized cycle duration: 15
+  index: 42, will order at time: 32, desired arrival at time: 44; realized cycle duration: 40
+  index: 43, will order at time: 32, desired arrival at time: 50; realized cycle duration: 31
+  index: 44, will order at time: 33, desired arrival at time: 50; realized cycle duration: 27
+  index: 45, will order at time: 34, desired arrival at time: 50; realized cycle duration: 30
+  index: 46, will order at time: 34, desired arrival at time: 45; realized cycle duration: 49
+  index: 47, will order at time: 36, desired arrival at time: 51; realized cycle duration: 29
+  index: 48, will order at time: 37, desired arrival at time: 54; realized cycle duration: 36
+  index: 49, will order at time: 38, desired arrival at time: 57; realized cycle duration: 61
+  index: 50, will order at time: 38, desired arrival at time: 53; realized cycle duration: 48
+  index: 51, will order at time: 39, desired arrival at time: 51; realized cycle duration: 83
+  index: 52, will order at time: 41, desired arrival at time: 53; realized cycle duration: 115
+  index: 53, will order at time: 41, desired arrival at time: 56; realized cycle duration: 34
+  index: 54, will order at time: 43, desired arrival at time: 59; realized cycle duration: 18
+  index: 55, will order at time: 43, desired arrival at time: 55; realized cycle duration: 29
+  index: 56, will order at time: 45, desired arrival at time: 60; realized cycle duration: 37
+  index: 57, will order at time: 46, desired arrival at time: 60; realized cycle duration: 45
+  index: 58, will order at time: 46, desired arrival at time: 63; realized cycle duration: 26
+  index: 59, will order at time: 46, desired arrival at time: 61; realized cycle duration: 39
+  index: 60, will order at time: 46, desired arrival at time: 64; realized cycle duration: 18
+  index: 61, will order at time: 46, desired arrival at time: 56; realized cycle duration: 41
+  index: 62, will order at time: 47, desired arrival at time: 64; realized cycle duration: 74
+  index: 63, will order at time: 48, desired arrival at time: 67; realized cycle duration: 57
+  index: 64, will order at time: 49, desired arrival at time: 64; realized cycle duration: 14
+  index: 65, will order at time: 50, desired arrival at time: 56; realized cycle duration: 39
+  index: 66, will order at time: 50, desired arrival at time: 58; realized cycle duration: 27
+  index: 67, will order at time: 51, desired arrival at time: 64; realized cycle duration: 46
+  index: 68, will order at time: 51, desired arrival at time: 65; realized cycle duration: 31
+  index: 69, will order at time: 51, desired arrival at time: 65; realized cycle duration: 90
+  index: 70, will order at time: 53, desired arrival at time: 68; realized cycle duration: 121
+  index: 71, will order at time: 54, desired arrival at time: 70; realized cycle duration: 44
+  index: 72, will order at time: 57, desired arrival at time: 74; realized cycle duration: 31
+  index: 73, will order at time: 58, desired arrival at time: 71; realized cycle duration: 57
+  index: 74, will order at time: 58, desired arrival at time: 73; realized cycle duration: 27
+  index: 75, will order at time: 59, desired arrival at time: 72; realized cycle duration: 45
+  index: 76, will order at time: 61, desired arrival at time: 77; realized cycle duration: 89
+  index: 77, will order at time: 61, desired arrival at time: 75; realized cycle duration: 30
+  index: 78, will order at time: 63, desired arrival at time: 78; realized cycle duration: 40
+  index: 79, will order at time: 64, desired arrival at time: 77; realized cycle duration: 61
+  index: 80, will order at time: 65, desired arrival at time: 80; realized cycle duration: 49
+  index: 81, will order at time: 68, desired arrival at time: 86; realized cycle duration: 115
+  index: 82, will order at time: 68, desired arrival at time: 83; realized cycle duration: 61
+  index: 83, will order at time: 71, desired arrival at time: 81; realized cycle duration: 30
+  index: 84, will order at time: 72, desired arrival at time: 82; realized cycle duration: 17
+  index: 85, will order at time: 73, desired arrival at time: 88; realized cycle duration: 48
+  index: 86, will order at time: 73, desired arrival at time: 86; realized cycle duration: 48
+  index: 87, will order at time: 73, desired arrival at time: 85; realized cycle duration: 47
+  index: 88, will order at time: 74, desired arrival at time: 92; realized cycle duration: 99
+  index: 89, will order at time: 74, desired arrival at time: 92; realized cycle duration: 29
+  index: 90, will order at time: 77, desired arrival at time: 94; realized cycle duration: 43
+  index: 91, will order at time: 77, desired arrival at time: 90; realized cycle duration: 30
+  index: 92, will order at time: 78, desired arrival at time: 93; realized cycle duration: 47
+  index: 93, will order at time: 79, desired arrival at time: 94; realized cycle duration: 94
+  index: 94, will order at time: 82, desired arrival at time: 94; realized cycle duration: 22
+  index: 95, will order at time: 84, desired arrival at time: 99; realized cycle duration: 27
+  index: 96, will order at time: 84, desired arrival at time: 107; realized cycle duration: 49
+  index: 97, will order at time: 84, desired arrival at time: 93; realized cycle duration: 39
+  index: 98, will order at time: 85, desired arrival at time: 97; realized cycle duration: 27
+  index: 99, will order at time: 86, desired arrival at time: 99; realized cycle duration: 22
+  index: 100, will order at time: 86, desired arrival at time: 103; realized cycle duration: 24
+  index: 101, will order at time: 87, desired arrival at time: 100; realized cycle duration: 24
+  index: 102, will order at time: 89, desired arrival at time: 98; realized cycle duration: 53
+  index: 103, will order at time: 90, desired arrival at time: 102; realized cycle duration: 44
+  index: 104, will order at time: 91, desired arrival at time: 108; realized cycle duration: 16
+  index: 105, will order at time: 92, desired arrival at time: 108; realized cycle duration: 80
+  index: 106, will order at time: 93, desired arrival at time: 105; realized cycle duration: 81
+  index: 107, will order at time: 94, desired arrival at time: 110; realized cycle duration: 13
+  index: 108, will order at time: 94, desired arrival at time: 106; realized cycle duration: 22
+  index: 109, will order at time: 97, desired arrival at time: 108; realized cycle duration: 24
+  index: 110, will order at time: 98, desired arrival at time: 119; realized cycle duration: 38
+  index: 111, will order at time: 98, desired arrival at time: 110; realized cycle duration: 59
+  index: 112, will order at time: 98, desired arrival at time: 113; realized cycle duration: 41
+  index: 113, will order at time: 99, desired arrival at time: 118; realized cycle duration: 23
+  index: 114, will order at time: 99, desired arrival at time: 114; realized cycle duration: 15
+  index: 115, will order at time: 100, desired arrival at time: 113; realized cycle duration: 61
+  index: 116, will order at time: 103, desired arrival at time: 116; realized cycle duration: 61
+  index: 117, will order at time: 103, desired arrival at time: 112; realized cycle duration: 82
+  index: 118, will order at time: 107, desired arrival at time: 117; realized cycle duration: 29
+  index: 119, will order at time: 108, desired arrival at time: 122; realized cycle duration: 24
+  index: 120, will order at time: 108, desired arrival at time: 127; realized cycle duration: 29
+  index: 121, will order at time: 111, desired arrival at time: 123; realized cycle duration: 88
+  index: 122, will order at time: 113, desired arrival at time: 131; realized cycle duration: 34
+  index: 123, will order at time: 114, desired arrival at time: 131; realized cycle duration: 34
+  index: 124, will order at time: 115, desired arrival at time: 126; realized cycle duration: 56
+  index: 125, will order at time: 116, desired arrival at time: 128; realized cycle duration: 77
+  index: 126, will order at time: 119, desired arrival at time: 132; realized cycle duration: 27
+  index: 127, will order at time: 119, desired arrival at time: 136; realized cycle duration: 39
+  index: 128, will order at time: 122, desired arrival at time: 137; realized cycle duration: 22
+  index: 129, will order at time: 126, desired arrival at time: 143; realized cycle duration: 13
+  index: 130, will order at time: 127, desired arrival at time: 141; realized cycle duration: 88
+  index: 131, will order at time: 128, desired arrival at time: 143; realized cycle duration: 54
+  index: 132, will order at time: 130, desired arrival at time: 144; realized cycle duration: 53
+  index: 133, will order at time: 133, desired arrival at time: 145; realized cycle duration: 84
+  index: 134, will order at time: 133, desired arrival at time: 148; realized cycle duration: 28
+  index: 135, will order at time: 134, desired arrival at time: 149; realized cycle duration: 17
+  index: 136, will order at time: 135, desired arrival at time: 153; realized cycle duration: 34
+  index: 137, will order at time: 136, desired arrival at time: 155; realized cycle duration: 81
+  index: 138, will order at time: 137, desired arrival at time: 152; realized cycle duration: 64
+  index: 139, will order at time: 138, desired arrival at time: 154; realized cycle duration: 33
+  index: 140, will order at time: 138, desired arrival at time: 151; realized cycle duration: 54
+  index: 141, will order at time: 139, desired arrival at time: 154; realized cycle duration: 42
+  index: 142, will order at time: 139, desired arrival at time: 163; realized cycle duration: 30
+  index: 143, will order at time: 140, desired arrival at time: 159; realized cycle duration: 25
+  index: 144, will order at time: 141, desired arrival at time: 152; realized cycle duration: 22
+  index: 145, will order at time: 141, desired arrival at time: 160; realized cycle duration: 48
+  index: 146, will order at time: 142, desired arrival at time: 150; realized cycle duration: 43
+  index: 147, will order at time: 142, desired arrival at time: 150; realized cycle duration: 35
+  index: 148, will order at time: 142, desired arrival at time: 153; realized cycle duration: 28
+  index: 149, will order at time: 142, desired arrival at time: 154; realized cycle duration: 33
+  index: 150, will order at time: 146, desired arrival at time: 167; realized cycle duration: 25
+  index: 151, will order at time: 147, desired arrival at time: 166; realized cycle duration: 38
+  index: 152, will order at time: 148, desired arrival at time: 164; realized cycle duration: 34
+  index: 153, will order at time: 150, desired arrival at time: 165; realized cycle duration: 42
+  index: 154, will order at time: 151, desired arrival at time: 171; realized cycle duration: 50
+  index: 155, will order at time: 153, desired arrival at time: 168; realized cycle duration: 29
+  index: 156, will order at time: 153, desired arrival at time: 164; realized cycle duration: 42
+  index: 157, will order at time: 153, desired arrival at time: 163; realized cycle duration: 54
+  index: 158, will order at time: 157, desired arrival at time: 173; realized cycle duration: 38
+  index: 159, will order at time: 158, desired arrival at time: 172; realized cycle duration: 24
+  index: 160, will order at time: 159, desired arrival at time: 176; realized cycle duration: 26
+  index: 161, will order at time: 161, desired arrival at time: 178; realized cycle duration: 44
+  index: 162, will order at time: 161, desired arrival at time: 176; realized cycle duration: 80
+  index: 163, will order at time: 163, desired arrival at time: 179; realized cycle duration: 48
+  index: 164, will order at time: 164, desired arrival at time: 180; realized cycle duration: 67
+  index: 165, will order at time: 167, desired arrival at time: 180; realized cycle duration: 31
+  index: 169, will order at time: 169, desired arrival at time: 179; realized cycle duration: 62
+Item returning flow: 
+
+----Period 0----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 0, 
+
+Update order info
+
+----Period 1----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 1, 
+  admit req: 2, 
+
+Update order info
+
+----Period 2----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 3----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 4----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 5----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 3, 
+
+Update order info
+
+----Period 6----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 7----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 4, 
+  reject req: 5, 
+
+Update order info
+
+----Period 8----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 6, 
+  assign item 1 to order 2
+Send out items:  [1]
+Will be back in:  [34.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 2 successful, desired time 8 :)
+
+----Period 9----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 7, 
+
+Update order info
+
+----Period 10----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 8, 
+  reject req: 9, 
+
+Update order info
+
+----Period 11----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 10, 
+
+Update order info
+
+----Period 12----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 11, 
+  reject req: 12, 
+
+Update order info
+
+----Period 13----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 13, 
+  reject req: 14, 
+  reject req: 15, 
+  reject req: 16, 
+  assign item 2 to order 1
+Send out items:  [2]
+Will be back in:  [68.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 1 successful, desired time 13 :)
+
+----Period 14----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 17, 
+  reject req: 18, 
+
+Update order info
+
+----Period 15----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 19, 
+  assign item 3 to order 0
+  assign item 0 to order 3
+Send out items:  [3, 0]
+Will be back in:  [20.0, 32.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 0 successful, desired time 15 :)
+  order 3 successful, desired time 15 :)
+
+----Period 16----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 17----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 18----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 20, 
+  reject req: 21, 
+  reject req: 22, 
+  reject req: 23, 
+
+Update order info
+
+----Period 19----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 24, 
+  reject req: 25, 
+
+Update order info
+
+----Period 20----
+Returned items []
+Nominal schedule admission - complete reschedule
+  assign item 4 to order 4
+Send out items:  [4]
+Will be back in:  [57.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 4 successful, desired time 20 :)
+
+----Period 21----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 26, 
+  reject req: 27, 
+
+Update order info
+
+----Period 22----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 28, 
+
+Update order info
+
+----Period 23----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 24----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 29, 
+  reject req: 30, 
+  reject req: 31, 
+
+Update order info
+
+----Period 25----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 26----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 32, 
+  reject req: 33, 
+
+Update order info
+
+----Period 27----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 34, 
+  reject req: 35, 
+  reject req: 36, 
+
+Update order info
+
+----Period 28----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 37, 
+
+Update order info
+
+----Period 29----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 38, 
+
+Update order info
+
+----Period 30----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 39, 
+
+Update order info
+
+----Period 31----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 40, 
+  reject req: 41, 
+
+Update order info
+
+----Period 32----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 42, 
+  admit req: 43, 
+
+Update order info
+
+----Period 33----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 44, 
+
+Update order info
+
+----Period 34----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 45, 
+  reject req: 46, 
+
+Update order info
+
+----Period 35----
+Returned items [3]
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 36----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 47, 
+
+Update order info
+
+----Period 37----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 48, 
+
+Update order info
+
+----Period 38----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 49, 
+  reject req: 50, 
+
+Update order info
+
+----Period 39----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 51, 
+
+Update order info
+
+----Period 40----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 41----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 52, 
+  reject req: 53, 
+
+Update order info
+
+----Period 42----
+Returned items [1]
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 43----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 54, 
+  reject req: 55, 
+
+Update order info
+
+----Period 44----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 45----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 56, 
+
+Update order info
+
+----Period 46----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 57, 
+  reject req: 58, 
+  reject req: 59, 
+  reject req: 60, 
+  reject req: 61, 
+
+Update order info
+
+----Period 47----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 62, 
+
+Update order info
+
+----Period 48----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 63, 
+
+Update order info
+
+----Period 49----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 64, 
+
+Update order info
+
+----Period 50----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 65, 
+  reject req: 66, 
+  assign item 1 to order 43
+Send out items:  [1]
+Will be back in:  [31.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 43 successful, desired time 50 :)
+
+----Period 51----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 67, 
+  reject req: 68, 
+  reject req: 69, 
+  order 47 expired and failed, desired time 51 :(
+
+Update order info
+
+----Period 52----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 53----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 70, 
+
+Update order info
+
+----Period 54----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 71, 
+  assign item 3 to order 48
+Send out items:  [3]
+Will be back in:  [36.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 48 successful, desired time 54 :)
+
+----Period 55----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 56----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 57----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 72, 
+  order 49 expired and failed, desired time 57 :(
+
+Update order info
+
+----Period 58----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 73, 
+  reject req: 74, 
+
+Update order info
+
+----Period 59----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 75, 
+  order 54 expired and failed, desired time 59 :(
+
+Update order info
+
+----Period 60----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 61----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 76, 
+  reject req: 77, 
+
+Update order info
+
+----Period 62----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 63----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 78, 
+
+Update order info
+
+----Period 64----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 79, 
+
+Update order info
+
+----Period 65----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 80, 
+
+Update order info
+
+----Period 66----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 67----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 68----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 81, 
+  reject req: 82, 
+  order 70 expired and failed, desired time 68 :(
+
+Update order info
+
+----Period 69----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 70----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 71----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 83, 
+  order 73 expired and failed, desired time 71 :(
+
+Update order info
+
+----Period 72----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 84, 
+
+Update order info
+
+----Period 73----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 85, 
+  reject req: 86, 
+  reject req: 87, 
+
+Update order info
+
+----Period 74----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 88, 
+  reject req: 89, 
+
+Update order info
+
+----Period 75----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 76----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 77----
+Returned items [4]
+Nominal schedule admission - complete reschedule
+  reject req: 90, 
+  reject req: 91, 
+  assign item 0 to order 76
+Send out items:  [0]
+Will be back in:  [89.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 76 successful, desired time 77 :)
+
+----Period 78----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 92, 
+
+Update order info
+
+----Period 79----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 93, 
+
+Update order info
+
+----Period 80----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 81----
+Returned items [1, 2]
+Nominal schedule admission - complete reschedule
+  assign item 2 to order 83
+Send out items:  [2]
+Will be back in:  [30.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 83 successful, desired time 81 :)
+
+----Period 82----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 94, 
+  assign item 4 to order 84
+Send out items:  [4]
+Will be back in:  [17.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 84 successful, desired time 82 :)
+
+----Period 83----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 84----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 95, 
+  reject req: 96, 
+  reject req: 97, 
+
+Update order info
+
+----Period 85----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 98, 
+
+Update order info
+
+----Period 86----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 99, 
+  reject req: 100, 
+
+Update order info
+
+----Period 87----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 101, 
+
+Update order info
+
+----Period 88----
+Returned items []
+Nominal schedule admission - complete reschedule
+  assign item 1 to order 85
+Send out items:  [1]
+Will be back in:  [48.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 85 successful, desired time 88 :)
+
+----Period 89----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 102, 
+
+Update order info
+
+----Period 90----
+Returned items [3]
+Nominal schedule admission - complete reschedule
+  reject req: 103, 
+
+Update order info
+
+----Period 91----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 104, 
+
+Update order info
+
+----Period 92----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 105, 
+  assign item 3 to order 88
+Send out items:  [3]
+Will be back in:  [99.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 88 successful, desired time 92 :)
+
+----Period 93----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 106, 
+
+Update order info
+
+----Period 94----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 107, 
+  reject req: 108, 
+
+Update order info
+
+----Period 95----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 96----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 97----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 109, 
+
+Update order info
+
+----Period 98----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 110, 
+  reject req: 111, 
+  reject req: 112, 
+
+Update order info
+
+----Period 99----
+Returned items [4]
+Nominal schedule admission - complete reschedule
+  admit req: 113, 
+  reject req: 114, 
+
+Update order info
+
+----Period 100----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 115, 
+
+Update order info
+
+----Period 101----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 102----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 103----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 116, 
+  reject req: 117, 
+
+Update order info
+
+----Period 104----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 105----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 106----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 107----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 118, 
+
+Update order info
+
+----Period 108----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 119, 
+  admit req: 120, 
+
+Update order info
+
+----Period 109----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 110----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 111----
+Returned items [2]
+Nominal schedule admission - complete reschedule
+  reject req: 121, 
+
+Update order info
+
+----Period 112----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 113----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 122, 
+
+Update order info
+
+----Period 114----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 123, 
+
+Update order info
+
+----Period 115----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 124, 
+
+Update order info
+
+----Period 116----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 125, 
+
+Update order info
+
+----Period 117----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 118----
+Returned items []
+Nominal schedule admission - complete reschedule
+  order 113 expired and failed, desired time 118 :(
+
+Update order info
+
+----Period 119----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 126, 
+  reject req: 127, 
+  assign item 2 to order 110
+Send out items:  [2]
+Will be back in:  [38.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 110 successful, desired time 119 :)
+
+----Period 120----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 121----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 122----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 128, 
+  order 119 expired and failed, desired time 122 :(
+
+Update order info
+
+----Period 123----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 124----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 125----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 126----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 129, 
+
+Update order info
+
+----Period 127----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 130, 
+  assign item 4 to order 120
+Send out items:  [4]
+Will be back in:  [29.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 120 successful, desired time 127 :)
+
+----Period 128----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 131, 
+
+Update order info
+
+----Period 129----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 130----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 132, 
+
+Update order info
+
+----Period 131----
+Returned items []
+Nominal schedule admission - complete reschedule
+  order 122 expired and failed, desired time 131 :(
+
+Update order info
+
+----Period 132----
+Returned items []
+Nominal schedule admission - complete reschedule
+  order 126 expired and failed, desired time 132 :(
+
+Update order info
+
+----Period 133----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 133, 
+  admit req: 134, 
+
+Update order info
+
+----Period 134----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 135, 
+
+Update order info
+
+----Period 135----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 136, 
+
+Update order info
+
+----Period 136----
+Returned items [1]
+Nominal schedule admission - complete reschedule
+  reject req: 137, 
+
+Update order info
+
+----Period 137----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 138, 
+
+Update order info
+
+----Period 138----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 139, 
+  reject req: 140, 
+
+Update order info
+
+----Period 139----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 141, 
+  admit req: 142, 
+
+Update order info
+
+----Period 140----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 143, 
+
+Update order info
+
+----Period 141----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 144, 
+  reject req: 145, 
+
+Update order info
+
+----Period 142----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 146, 
+  reject req: 147, 
+  reject req: 148, 
+  reject req: 149, 
+
+Update order info
+
+----Period 143----
+Returned items []
+Nominal schedule admission - complete reschedule
+  order 129 expired and failed, desired time 143 :(
+
+Update order info
+
+----Period 144----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 145----
+Returned items []
+Nominal schedule admission - complete reschedule
+  assign item 1 to order 133
+Send out items:  [1]
+Will be back in:  [84.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 133 successful, desired time 145 :)
+
+----Period 146----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 150, 
+
+Update order info
+
+----Period 147----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 151, 
+
+Update order info
+
+----Period 148----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 152, 
+  order 134 expired and failed, desired time 148 :(
+
+Update order info
+
+----Period 149----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 150----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 153, 
+
+Update order info
+
+----Period 151----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 154, 
+
+Update order info
+
+----Period 152----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 153----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 155, 
+  reject req: 156, 
+  reject req: 157, 
+
+Update order info
+
+----Period 154----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 155----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 156----
+Returned items [4]
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 157----
+Returned items [2]
+Nominal schedule admission - complete reschedule
+  reject req: 158, 
+
+Update order info
+
+----Period 158----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 159, 
+
+Update order info
+
+----Period 159----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 160, 
+
+Update order info
+
+----Period 160----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 161----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 161, 
+  reject req: 162, 
+
+Update order info
+
+----Period 162----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 163----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 163, 
+  order 142 expired and failed, desired time 163 :(
+
+Update order info
+
+----Period 164----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 164, 
+
+Update order info
+
+----Period 165----
+Returned items []
+Nominal schedule admission - complete reschedule
+  assign item 2 to order 153
+Send out items:  [2]
+Will be back in:  [42.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 153 successful, desired time 165 :)
+
+----Period 166----
+Returned items []
+Nominal schedule admission - complete reschedule
+  order 151 expired and failed, desired time 166 :(
+
+Update order info
+
+----Period 167----
+Returned items []
+Nominal schedule admission - complete reschedule
+  admit req: 165, 
+  assign item 4 to order 150
+Send out items:  [4]
+Will be back in:  [25.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 150 successful, desired time 167 :)
+
+----Period 168----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 169----
+Returned items []
+Nominal schedule admission - complete reschedule
+  reject req: 169, 
+
+Update order info
+
+----Period 170----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 171----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 172----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 173----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 174----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 175----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 176----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 177----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 178----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 179----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+----Period 180----
+Returned items []
+Nominal schedule admission - complete reschedule
+  order 164 expired and failed, desired time 180 :(
+  assign item 0 to order 165
+Send out items:  [0]
+Will be back in:  [31.0]  (realized), expected to be back in:  38
+
+Update order info
+  order 165 successful, desired time 180 :)
+
+----Period 181----
+Returned items []
+Nominal schedule admission - complete reschedule
+
+Update order info
+
+Running with disp policy:  NomiSchCpl , admit:  NomiSchCpl , alloc:  NomiSch
+
+1st service rate (admission):
+  32 out of 167: 19.16 %
+2nd service rate (on-time arrival):
+  18 out of 32: 56.25 %
+Entire service rate (succ service/all req):
+  18 out of 167: 10.78 %
+Item circulation:
+  average cnt:  3.6
+  cnt for all items:  [3, 4, 4, 3, 4]
