@@ -4,8 +4,10 @@
 
 from simulator_classes import *
 
-def FOFS_alloc(inventory, orders, length_of_delivery, t): #EDIT FOFS CODES, SHOULD EDIT EDD TOO
-    print("\nAllocation control with FOFS policy")
+def FOFS_alloc(inventory, orders, length_of_delivery, t, enable_output_file): #EDIT FOFS CODES, SHOULD EDIT EDD TOO
+    # REPORT
+    if enable_output_file:
+        print("\nAllocation control with FOFS policy")
 
     current_inv = inventory.current_inv
     if current_inv <= 0:
@@ -14,9 +16,11 @@ def FOFS_alloc(inventory, orders, length_of_delivery, t): #EDIT FOFS CODES, SHOU
     orders = [o for o in orders if o.status == 0 and o.desired_time >= t+length_of_delivery] #all the admitted but not commited orders (+extra validity check)
     sorted_orders = sort_order_list_by_t(orders)
     inv_items = inventory.take_inv_items_list()
-    print("  current inv: %d"%current_inv)
-    for od in sorted_orders:
-        print("  uncommited order: %d, order time: %d, desired time: %d"%(od.req_index, od.order_time, od.desired_time))
+    # REPORT
+    if enable_output_file:
+        print("  current inv: %d"%current_inv)
+        for od in sorted_orders:
+            print("  uncommited order: %d, order time: %d, desired time: %d"%(od.req_index, od.order_time, od.desired_time))
 
     commit_cnt = 0
     num_orders = len(orders)
@@ -36,8 +40,10 @@ def FOFS_alloc(inventory, orders, length_of_delivery, t): #EDIT FOFS CODES, SHOU
 
     return commited_items, desired_dates, realized_cycle_duration
 
-def EDD_alloc(inventory, orders, length_of_delivery, t, lead_time):
-    print("\nAllocation control with EDD policy, lead time %d" %lead_time)
+def EDD_alloc(inventory, orders, length_of_delivery, t, lead_time, enable_output_file):
+    # REPORT
+    if enable_output_file:
+        print("\nAllocation control with EDD policy, lead time %d" %lead_time)
 
     current_inv = inventory.current_inv
     if current_inv <= 0:
@@ -47,9 +53,11 @@ def EDD_alloc(inventory, orders, length_of_delivery, t, lead_time):
     orders = [o for o in orders if t >= o.desired_time - lead_time]
     sorted_orders = sort_order_list_by_s(orders)
     inv_items = inventory.take_inv_items_list()
-    print("  current inv: %d" % current_inv)
-    for od in sorted_orders:
-        print("  uncommited eligible order: %d, order time: %d, desired time: %d"%(od.req_index, od.order_time, od.desired_time))
+    # REPORT
+    if enable_output_file:
+        print("  current inv: %d" % current_inv)
+        for od in sorted_orders:
+            print("  uncommited eligible order: %d, order time: %d, desired time: %d"%(od.req_index, od.order_time, od.desired_time))
     commit_cnt = 0
     num_orders = len(orders)
 

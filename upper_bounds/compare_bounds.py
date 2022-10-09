@@ -79,7 +79,7 @@ def scale_down_data(scale, n_num_items, m_num_reqs, item_release_time, req_desir
 
 item_data_prefix = "data/itemdata_rseed"
 req_data_prefix = "data/reqdata_rseed"
-rseeds = list(range(1, 31)) #All results: range(1, 31)
+rseeds = list(range(1, 51)) #All results: range(1, 31)
 printsol = 1
 
 T = 182

@@ -26,9 +26,11 @@ parameters_main = {
 parameters_dist = {
     "customer_request_poisson_rate": 1,
 
-    "cycle_duration_lognormal_median": 38,
+    "cycle_duration_lognormal_percentile": 38,
     "cycle_duration_lognormal_mu": 3.615,
     "cycle_duration_lognormal_sigma": 0.5073,
+
+    "NomiSch_realtime_delay_grace_period": 3, #TODO: experiment goes here
 
     # "regular_return_periods": 37,
     # "return_no_delay_proportion": 0.5,

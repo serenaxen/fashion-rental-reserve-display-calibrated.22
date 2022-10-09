@@ -43,6 +43,7 @@ class Inventory:
         # Create item set(list)
         self.num_items = paras['total_items']
         self.items = [ProductItem(i) for i in range(self.num_items)]
+        self.enable_output_file = paras['enable_output_file']
 
     def initialize(self):
         # starting_inv = self.paras['starting_inv']
@@ -63,10 +64,10 @@ class Inventory:
         self.current_inv = starting_inv
 
         num_out = self.num_items - starting_inv
-        cycle_duration_lognormal_median = self.paras['cycle_duration_lognormal_median']
+        cycle_duration_lognormal_percentile = self.paras['cycle_duration_lognormal_percentile']
         if num_out > 0:
             for j in range(num_out):
-                errp = uniform_discrete_one(1, cycle_duration_lognormal_median+1)
+                errp = uniform_discrete_one(1, cycle_duration_lognormal_percentile+1)
                 self.items[j].init_out(rp = errp, errp = errp) # first random number generated here!
 
     def update_rp_errp_per_period(self):
@@ -80,7 +81,9 @@ class Inventory:
             if id:
                 return_items.append(id)
         self.current_inv += len(return_items)
-        print("Returned items", return_items)
+        # REPORT
+        if self.enable_output_file:
+            print("Returned items", return_items)
         return return_items
 
     def take_inv_items_list(self):
@@ -90,8 +93,10 @@ class Inventory:
         for i in range(len(item_index_list)):
             self.items[item_index_list[i]].send_out(rp_list[i], errp_list[i])
             self.current_inv -= 1
-        print("Send out items: ", item_index_list)
-        print("Will be back in: ", rp_list, " (realized), expected to be back in: ", errp_list[i])
+        # REPORT
+        if self.enable_output_file:
+            print("Send out items: ", item_index_list)
+            print("Will be back in: ", rp_list, " (realized), expected to be back in: ", errp_list[i])
 
     def predict_future_inv_median_cycle(self, time, future_time, inv_occup_record):
         current_inv = 0
@@ -109,7 +114,9 @@ class Inventory:
         return future_raw_inv, current_inv, future_exp_return, num_occupied_items
 
     def report_current_inv(self):
-        print("Current inv quantity:", self.current_inv)
+        # REPORT
+        if self.enable_output_file:
+            print("Current inv quantity:", self.current_inv)
         return self.current_inv
 
     def report_current_inv_id(self):
@@ -168,7 +175,7 @@ class CustomerRequest:
 
 
 class CustomerOrder: #only for admitted (available & chosen) requests
-    def __init__(self, req_index, order_time, desired_periods, realized_cycle_duration):
+    def __init__(self, req_index, order_time, desired_periods, realized_cycle_duration, enable_output_file):
         self.req_index = req_index
         self.order_time = order_time
         self.desired_periods = desired_periods
@@ -177,21 +184,29 @@ class CustomerOrder: #only for admitted (available & chosen) requests
 
         self.realized_cycle_duration = realized_cycle_duration
 
+        self.enable_output_file = enable_output_file
+
     def commit_order(self, item_index, commit_time):
         self.status = 1 # 1 for "commit"
         self.commit_item = item_index
         self.commit_time = commit_time
-        print("  assign item %d to order %d" % (item_index, self.req_index))
+        # REPORT
+        if self.enable_output_file:
+            print("  assign item %d to order %d" % (item_index, self.req_index))
 
     def finish_order(self, finish_time):
         self.status = 2 # 2 for "success"
         self.finish_time = finish_time
-        print("  order %d successful, desired time %s :)" % (self.req_index, self.desired_time))
+        # REPORT
+        if self.enable_output_file:
+            print("  order %d successful, desired time %s :)" % (self.req_index, self.desired_time))
 
     def fail_order(self, fail_time):
         self.status = -2 # -2 for "failure"
         self.fail_time = fail_time
-        print("  order %d expired and failed, desired time %s :(" %(self.req_index, self.desired_time))
+        # REPORT
+        if self.enable_output_file:
+            print("  order %d expired and failed, desired time %s :(" %(self.req_index, self.desired_time))
 
     # def save_later_order(self):
     #     self.status = 5
@@ -280,21 +295,21 @@ class NominalSchedule:
                 affected_req_index = req_index
                 return affected_req_index #Note: here we may have a invalid schedule before further processing
 
-    # def reschedule_for_one_item_delay(self, affected_req_index):
-    #     updated_assign = self.__model_complete_reschedule_for_delay()
-    #     if updated_assign: #available YES
-    #         self.ns_assign_item = updated_assign
-    #         return True
-    #     else: # have to fail the affected req
-    #         self.fail_order_one(affected_req_index)
-    #         return False
+    def reschedule_for_one_item_delay(self, affected_req_index, t, T):
+        updated_assign = self.__model_complete_reschedule_for_delay(t, T)
+        if updated_assign: #available YES
+            self.ns_assign_item = updated_assign
+            return True
+        else: # have to fail the affected req
+            self.fail_order_one(affected_req_index)
+            return False
 
-    # def __model_complete_reschedule_for_delay(self):
-    #     obj_val, updated_assign = model_complete_reschedule(self.on_schedule_req_list.copy(), self.ns_start.copy(), self.ns_length.copy(),
-    #                                                         self.num_items, self.item_exp_release_time.copy(), t, T)
-    #
-    #     if obj_val == len(self.on_schedule_req_list): # can resolve conflict
-    #         return updated_assign
+    def __model_complete_reschedule_for_delay(self, t, T):
+        obj_val, updated_assign = model_complete_reschedule(self.on_schedule_req_list.copy(), self.ns_start.copy(), self.ns_length.copy(),
+                                                            self.num_items, self.item_exp_release_time.copy(), t, T)
+
+        if obj_val == len(self.on_schedule_req_list): # can resolve conflict
+            return updated_assign
 
     # def check_schedule_validity(self): # for safety
 
